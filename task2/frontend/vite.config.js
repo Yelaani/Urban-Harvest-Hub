@@ -11,7 +11,7 @@ export default defineConfig({
       srcDir: 'src',
       filename: 'sw.js',
       registerType: 'autoUpdate',
-      includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'masked-icon.svg'],
+      includeAssets: ['favicon.ico', 'apple-touch-icon.png', 'masked-icon.svg', 'logo.svg'],
       manifest: {
         name: 'Urban Harvest Hub',
         short_name: 'UrbanHarvest',
@@ -20,6 +20,12 @@ export default defineConfig({
         background_color: '#ffffff',
         display: 'standalone',
         icons: [
+          {
+            src: 'logo.svg',
+            sizes: 'any',
+            type: 'image/svg+xml',
+            purpose: 'any maskable'
+          },
           {
             src: 'pwa-192x192.png',
             sizes: '192x192',

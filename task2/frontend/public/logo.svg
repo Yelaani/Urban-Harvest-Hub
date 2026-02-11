@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Rounded White Background for prominence -->
+  <rect width="512" height="512" rx="128" fill="#ffffff"/>
+  
+  <!-- Urban Building Base (Earth Brown) -->
+  <path d="M140 420h232v-120h-50l-66-50-66 50h-50z" fill="#7B341E" />
+  
+  <!-- Sprout Stem (Urban Green) -->
+  <path d="M256 420V200" stroke="#2F855A" stroke-width="24" stroke-linecap="round"/>
+  
+  <!-- Top Leaf -->
+  <path d="M256 200c70 0 110-100 0-140-110 40-70 140 0 140z" fill="#2F855A"/>
+  
+  <!-- Lower Leaf -->
+  <path d="M256 280c50 0 80-70 0-100-80 30-50 100 0 100z" fill="#2F855A" opacity="0.8"/>
+</svg>
