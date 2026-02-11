@@ -1,8 +1,13 @@
 import axios from 'axios';
 
-const api = axios.create({
-    baseURL: import.meta.env.VITE_API_BASE_URL || 'http://localhost:3000/api',
-});
+let baseURL = import.meta.env.VITE_API_BASE_URL || import.meta.env.VITE_API_URL || 'http://localhost:3000/api';
+
+// Enforce /api suffix if missing from the URL
+if (!baseURL.toLowerCase().includes('/api')) {
+    baseURL = baseURL.endsWith('/') ? `${baseURL}api` : `${baseURL}/api`;
+}
+
+const api = axios.create({ baseURL });
 
 // Request interceptor to add the auth token header to requests
 api.interceptors.request.use(

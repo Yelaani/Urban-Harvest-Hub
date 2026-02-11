@@ -40,13 +40,11 @@ if (publicVapidKey && privateVapidKey) {
 
 
 // Middleware
-// CORS configuration - allow Vercel frontend and local development
+// 1. PLACE THIS BEFORE ALL ROUTES
 app.use(cors({
-    origin: [
-        process.env.FRONTEND_URL || 'https://your-app.vercel.app',
-        'http://localhost:5173'  // For local development
-    ],
-    credentials: true
+    origin: '*', // Allows any origin to access the API
+    methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization']
 }));
 app.use(express.json());
 
@@ -59,6 +57,15 @@ app.use('/api/bookings', bookingRoutes);
 app.use('/api/push', pushRoutes);
 app.use('/api/users', userRoutes);
 
+// Mirror routes without /api prefix for robustness
+app.use('/auth', authRoutes);
+app.use('/products', productRoutes);
+app.use('/workshops', workshopRoutes);
+app.use('/events', eventRoutes);
+app.use('/bookings', bookingRoutes);
+app.use('/push', pushRoutes);
+app.use('/users', userRoutes);
+
 // Test Route
 app.get('/api/health', (req, res) => {
     res.json({ status: 'ok', message: 'Urban Harvest Hub API is running' });
@@ -69,11 +76,11 @@ const startServer = async () => {
     try {
         await sequelize.authenticate();
         console.log('Database connected successfully.');
-        
+
         // Sync database tables (without force to preserve data)
         await sequelize.sync();
         console.log('Database tables synced.');
-        
+
         // Check if database is empty and seed if needed
         const userCount = await User.count();
         if (userCount === 0) {
