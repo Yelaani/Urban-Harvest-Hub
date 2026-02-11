@@ -1,0 +1,71 @@
+
+# URBAN HARVEST HUB - ASSIGNMENT STATUS & TODO LIST
+# Target Grade: 1st Class
+
+--------------------------------------------------------------------------------
+TASK 1: COMPONENT-BASED WEB APPLICATION (SPA)
+--------------------------------------------------------------------------------
+STATUS: MOSTLY COMPLETE (Estimated 90%)
+
+[DONE]
+- Project Setup: React + Vite (Confirmed)
+- Routing: implemented with `react-router-dom` (Home, Login, Category, Details, Booking, Payment)
+- Component Architecture: Clean separation (components/pages/contexts/services)
+- Data Handling: Context API (AuthContext, CartContext) and Services used.
+- Styling: Tailwind CSS configured with custom colors ('urban-green', 'earth-brown') and font ('outfit').
+- Master-Detail Pattern: Implemented via Routing (/explore -> /item/:id).
+
+[TO DO - CRITICAL FOR 1ST CLASS]
+1. Accessibility Audit (Criteria: 5 marks)
+   - Ensure all non-text content (images) has alt text.
+   - Verify ARIA roles are used for interactive elements not using semantic tags.
+   - Test keyboard navigation (Tab key) through all forms and links.
+
+2. Documentation (Criteria: 5 marks)
+   - Prepare to explain development choices (why React? why Tailwind? how is state managed?).
+   - Ensure clear comments in complex logic.
+
+--------------------------------------------------------------------------------
+TASK 2: PWA + REST API + DATABASE
+--------------------------------------------------------------------------------
+STATUS: MISSING KEY REQUIREMENTS (Estimated 70%)
+
+[DONE]
+- Backend: Express Server with Routes (Auth, Products, Workshops, Events, Bookings).
+- Database: SQLite connected via Sequelize.
+- PWA Core: Manifest.json and Service Worker configured via `vite-plugin-pwa`.
+- Offline Support: Runtime caching configured for API and Images.
+- Mobile Features: Dark Mode implemented.
+- Frontend Integration: Proxy configured, API services connected.
+
+[TO DO - CRITICAL FOR 1ST CLASS]
+1. Multilingual Support (MISSING)
+   - Requirement: "Multilingual support (English + one other language)."
+   - Action: Install `react-i18next`, create JSON translation files (e.g., en.json, es.json), and add a Language Switcher UI.
+   
+2. Push Notifications
+   - Current State: `NotificationService.js` implements *Local* Notifications.
+   - Requirement: "Push messages for updates".
+   - Action: 
+     - If "real" push is needed: Implement `web-push` on backend for VAPID keys and subscription storage.
+     - If "local" is sufficient: Ensure they trigger effectively on relevant user actions (like "Booking Confirmed").
+
+3. Deployment (MISSING)
+   - Requirement: "Deployed in production... secured with HTTPS".
+   - Action: 
+     - Deploy Backend to platform like Render, Railway, or Fly.io.
+     - Deploy Frontend to Vercel or Netlify.
+     - Connect Frontend Production Build to Backend Production URL.
+
+4. Performance & PWA Audit
+   - Run Google Lighthouse Audit.
+   - Target Score: >90 on PWA, Performance, and Accessibility categories.
+
+--------------------------------------------------------------------------------
+IMMEDIATE ACTION PLAN
+--------------------------------------------------------------------------------
+1. Install `react-i18next` and `i18next` in `task2/frontend`.
+2. Create Translation Context/Provider and Switcher Component.
+3. Test PWA installability (offline mode check).
+4. Run Lighthouse audit and fix red flags.
+5. Deploy Backend and Frontend.

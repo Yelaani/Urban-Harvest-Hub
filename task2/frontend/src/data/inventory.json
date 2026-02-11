@@ -1,0 +1,432 @@
+[
+    {
+        "id": "evt-001",
+        "category": "events",
+        "title": "Urban Gardening Workshop",
+        "description": "Learn the basics of setting up your own urban garden on a balcony or small space.",
+        "price": 45.00,
+        "image": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&q=80&w=800",
+        "date": "2026-03-15",
+        "location": "City Park Pavilion",
+        "coordinates": {
+            "lat": 40.7128,
+            "lng": -74.0060
+        }
+    },
+    {
+        "id": "prod-001",
+        "category": "products",
+        "title": "Organic Basil Grow Kit",
+        "description": "Everything you need to grow fresh basil at home. Includes pot, soil, and seeds.",
+        "price": 24.99,
+        "image": "https://images.unsplash.com/photo-1466781783364-36c955e42a7f?auto=format&fit=crop&q=80&w=800",
+        "availability": "In Stock"
+    },
+    {
+        "id": "wk-001",
+        "category": "workshops",
+        "title": "Sustainable Composting Masterclass",
+        "description": "Deep dive into composting techniques for apartment dwellers.",
+        "price": 60.00,
+        "image": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&q=80&w=800",
+        "date": "2026-03-20",
+        "location": "Green Hub Center",
+        "coordinates": {
+            "lat": 34.0522,
+            "lng": -118.2437
+        }
+    },
+    {
+        "id": "prod-002",
+        "category": "products",
+        "title": "Heirloom Tomato Seeds",
+        "description": "Rare variety of tomato seeds, perfect for summer harvesting.",
+        "price": 8.50,
+        "image": "https://images.unsplash.com/photo-1592841200221-a6898f307baa?auto=format&fit=crop&q=80&w=800",
+        "availability": "In Stock"
+    },
+    {
+        "id": "evt-002",
+        "category": "events",
+        "title": "Eco-Friendly Market Day",
+        "description": "Join us for a day of local produce and sustainable goods.",
+        "price": 0.00,
+        "image": "https://images.unsplash.com/photo-1488459716781-31db52582fe9?auto=format&fit=crop&q=80&w=800",
+        "date": "2026-04-01",
+        "location": "Community Square",
+        "coordinates": {
+            "lat": 51.5074,
+            "lng": -0.1278
+        }
+    },
+    {
+        "id": "prod-003",
+        "category": "products",
+        "title": "Bamboo Garden Tool Set",
+        "description": "Essential gardening tools made from sustainable bamboo and recycled steel.",
+        "price": 35.00,
+        "image": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&q=80&w=800",
+        "availability": "In Stock"
+    },
+    {
+        "id": "prod-004",
+        "category": "products",
+        "title": "Vertical Wall Planter",
+        "description": "Maximize your small space with this modular vertical planting system.",
+        "price": 49.99,
+        "image": "https://images.unsplash.com/photo-1485955900006-10f4d324d411?auto=format&fit=crop&q=80&w=800",
+        "availability": "In Stock"
+    },
+    {
+        "id": "prod-005",
+        "category": "products",
+        "title": "Organic Vegetable Seeds",
+        "description": "Premium collection of organic vegetable seeds for your garden. Includes tomatoes, peppers, lettuce, and more.",
+        "price": 15.99,
+        "image": "https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&q=80&w=800",
+        "availability": "In Stock"
+    },
+    {
+        "id": "prod-006",
+        "category": "products",
+        "title": "Ceramic Self-Watering Pot",
+        "description": "Stylish pot that takes care of watering for you. Perfect for busy plant parents.",
+        "price": 28.50,
+        "image": "https://images.unsplash.com/photo-1485955900006-10f4d324d411?auto=format&fit=crop&q=80&w=800",
+        "availability": "Low Stock"
+    },
+    {
+        "id": "prod-007",
+        "category": "products",
+        "title": "Solitary Bee Hotel",
+        "description": "Provide a safe nesting place for solitary bees and improve your garden's pollination.",
+        "price": 32.00,
+        "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&q=80&w=800",
+        "availability": "In Stock"
+    },
+    {
+        "id": "prod-008",
+        "category": "products",
+        "title": "Oyster Mushroom Grow Kit",
+        "description": "Grow delicious gourmet mushrooms on your kitchen counter in just 10 days.",
+        "price": 22.00,
+        "image": "https://images.unsplash.com/photo-1459411621453-7b03977f4bfc?auto=format&fit=crop&q=80&w=800",
+        "availability": "In Stock"
+    },
+    {
+        "id": "prod-009",
+        "category": "products",
+        "title": "Rainwater Collection Barrel",
+        "description": "Collect and store rainwater for your garden with this compact 50L barrel.",
+        "price": 85.00,
+        "image": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&q=80&w=800",
+        "availability": "In Stock"
+    },
+    {
+        "id": "prod-010",
+        "category": "products",
+        "title": "Reusable Produce Bags",
+        "description": "Set of 5 organic cotton mesh bags for plastic-free grocery shopping.",
+        "price": 12.99,
+        "image": "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&q=80&w=800",
+        "availability": "In Stock"
+    },
+    {
+        "id": "prod-011",
+        "category": "products",
+        "title": "Heirloom Carrot Seeds",
+        "description": "Sweet and colorful mix of purple, yellow, and orange carrot seeds.",
+        "price": 6.50,
+        "image": "https://images.unsplash.com/photo-1598170845058-32b9d6a5da37?auto=format&fit=crop&q=80&w=800",
+        "availability": "In Stock"
+    },
+    {
+        "id": "prod-012",
+        "category": "products",
+        "title": "Gardening Gloves",
+        "description": "Durable and breathable gloves made from recycled materials.",
+        "price": 18.00,
+        "image": "https://images.unsplash.com/photo-1617576683096-00fc8eecb3af?auto=format&fit=crop&q=80&w=800",
+        "availability": "In Stock"
+    },
+    {
+        "id": "wk-002",
+        "category": "workshops",
+        "title": "Hydroponics for Beginners",
+        "description": "Learn how to grow plants without soil. Perfect for indoor urban farming.",
+        "price": 55.00,
+        "image": "https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?auto=format&fit=crop&q=80&w=800",
+        "date": "2026-03-22",
+        "location": "Innovation Lab",
+        "coordinates": {
+            "lat": 41.8781,
+            "lng": -87.6298
+        }
+    },
+    {
+        "id": "wk-003",
+        "category": "workshops",
+        "title": "Urban Beekeeping 101",
+        "description": "Introduction to keeping bees in the city. Safety, hives, and honey harvesting.",
+        "price": 75.00,
+        "image": "https://images.unsplash.com/photo-1587049352846-4a222e784acc?auto=format&fit=crop&q=80&w=800",
+        "date": "2026-04-10",
+        "location": "Rooftop Aviary",
+        "coordinates": {
+            "lat": 37.7749,
+            "lng": -122.4194
+        }
+    },
+    {
+        "id": "wk-004",
+        "category": "workshops",
+        "title": "DIY Natural Pest Control",
+        "description": "Protect your plants without harmful chemicals using natural remedies.",
+        "price": 40.00,
+        "image": "https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&q=80&w=800",
+        "date": "2026-03-28",
+        "location": "Community Garden Center",
+        "coordinates": {
+            "lat": 47.6062,
+            "lng": -122.3321
+        }
+    },
+    {
+        "id": "wk-005",
+        "category": "workshops",
+        "title": "Microgreens Masterclass",
+        "description": "Grow nutrient-packed microgreens on your windowsill year-round.",
+        "price": 50.00,
+        "image": "https://images.unsplash.com/photo-1585238341710-4a2c9f0c3a7c?auto=format&fit=crop&q=80&w=800",
+        "date": "2026-05-05",
+        "location": "Urban Kitchen",
+        "coordinates": {
+            "lat": 39.9526,
+            "lng": -75.1652
+        }
+    },
+    {
+        "id": "wk-006",
+        "category": "workshops",
+        "title": "Permaculture Principles",
+        "description": "Designing sustainable systems that mimic nature for your home and garden.",
+        "price": 80.00,
+        "image": "https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?auto=format&fit=crop&q=80&w=800",
+        "date": "2026-06-12",
+        "location": "Eco Institute",
+        "coordinates": {
+            "lat": 45.5051,
+            "lng": -122.6750
+        }
+    },
+    {
+        "id": "wk-007",
+        "category": "workshops",
+        "title": "Seed Saving Techniques",
+        "description": "Preserve biodiversity by learning how to harvest and store seeds properly.",
+        "price": 45.00,
+        "image": "https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&q=80&w=800",
+        "date": "2026-08-15",
+        "location": "Heritage Barn",
+        "coordinates": {
+            "lat": 30.2672,
+            "lng": -97.7431
+        }
+    },
+    {
+        "id": "wk-008",
+        "category": "workshops",
+        "title": "Container Gardening",
+        "description": "Strategies for growing abundance in pots, hanging baskets, and small boxes.",
+        "price": 40.00,
+        "image": "https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&q=80&w=800",
+        "date": "2026-04-18",
+        "location": "City Balcony Showroom",
+        "coordinates": {
+            "lat": 25.7617,
+            "lng": -80.1918
+        }
+    },
+    {
+        "id": "wk-009",
+        "category": "workshops",
+        "title": "Fermentation Basics",
+        "description": "Turn your garden harvest into probiotic-rich foods like sauerkraut and kimchi.",
+        "price": 65.00,
+        "image": "https://images.unsplash.com/photo-1615485500834-bc10199bc727?auto=format&fit=crop&q=80&w=800",
+        "date": "2026-09-10",
+        "location": "Food Lab",
+        "coordinates": {
+            "lat": 42.3601,
+            "lng": -71.0589
+        }
+    },
+    {
+        "id": "wk-010",
+        "category": "workshops",
+        "title": "Medicinal Herbs Strategy",
+        "description": "Growing and using healing herbs from your own garden.",
+        "price": 60.00,
+        "image": "https://images.unsplash.com/photo-1466781783364-36c955e42a7f?auto=format&fit=crop&q=80&w=800",
+        "date": "2026-07-20",
+        "location": "Wellness Center Garden",
+        "coordinates": {
+            "lat": 32.7767,
+            "lng": -96.7970
+        }
+    },
+    {
+        "id": "wk-011",
+        "category": "workshops",
+        "title": "Soil Health & Regeneration",
+        "description": "Understand the microbial life in your soil and how to nurture it.",
+        "price": 50.00,
+        "image": "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&q=80&w=800",
+        "date": "2026-05-22",
+        "location": "Community Plot",
+        "coordinates": {
+            "lat": 33.4484,
+            "lng": -112.0740
+        }
+    },
+    {
+        "id": "evt-003",
+        "category": "events",
+        "title": "Spring Seed Swap",
+        "description": "Bring your excess seeds and trade them with neighbors. Free event!",
+        "price": 0.00,
+        "image": "https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&q=80&w=800",
+        "date": "2026-03-10",
+        "location": "Public Library Hall",
+        "coordinates": {
+            "lat": 39.7392,
+            "lng": -104.9903
+        }
+    },
+    {
+        "id": "evt-004",
+        "category": "events",
+        "title": "Community Garden Cleanup",
+        "description": "Volunteer to help prepare our shared spaces for the growing season.",
+        "price": 0.00,
+        "image": "https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&q=80&w=800",
+        "date": "2026-04-05",
+        "location": "Riverside Gardens",
+        "coordinates": {
+            "lat": 36.1627,
+            "lng": -86.7816
+        }
+    },
+    {
+        "id": "evt-005",
+        "category": "events",
+        "title": "Sustainability Fair 2026",
+        "description": "Exhibitors, speakers, and demonstrations on living a greener life.",
+        "price": 10.00,
+        "image": "https://images.unsplash.com/photo-1488459716781-31db52582fe9?auto=format&fit=crop&q=80&w=800",
+        "date": "2026-05-15",
+        "location": "Convention Center",
+        "coordinates": {
+            "lat": 29.7604,
+            "lng": -95.3698
+        }
+    },
+    {
+        "id": "evt-006",
+        "category": "events",
+        "title": "Farm-to-Table Dinner",
+        "description": "A 4-course meal prepared by local chefs using ingredients grown within 10 miles.",
+        "price": 95.00,
+        "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=800",
+        "date": "2026-06-20",
+        "location": "Urban Orchard",
+        "coordinates": {
+            "lat": 35.2271,
+            "lng": -80.8431
+        }
+    },
+    {
+        "id": "evt-007",
+        "category": "events",
+        "title": "Urban Harvest Festival",
+        "description": "Celebrate the end of the season with music, food, and games.",
+        "price": 15.00,
+        "image": "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?auto=format&fit=crop&q=80&w=800",
+        "date": "2026-10-10",
+        "location": "Central Green",
+        "coordinates": {
+            "lat": 44.9778,
+            "lng": -93.2650
+        }
+    },
+    {
+        "id": "evt-008",
+        "category": "events",
+        "title": "Green City Architecture Tour",
+        "description": "Walking tour highlighting the city's most sustainable buildings and rooftops.",
+        "price": 25.00,
+        "image": "https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?auto=format&fit=crop&q=80&w=800",
+        "date": "2026-07-08",
+        "location": "Downtown Plaza",
+        "coordinates": {
+            "lat": 33.7490,
+            "lng": -84.3880
+        }
+    },
+    {
+        "id": "evt-009",
+        "category": "events",
+        "title": "Kids Nature Scavenger Hunt",
+        "description": "Fun interactive activity for children to learn about local flora and fauna.",
+        "price": 5.00,
+        "image": "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&q=80&w=800",
+        "date": "2026-08-12",
+        "location": "Botanical Gardens",
+        "coordinates": {
+            "lat": 38.9072,
+            "lng": -77.0369
+        }
+    },
+    {
+        "id": "evt-010",
+        "category": "events",
+        "title": "Local Farmers Meet & Greet",
+        "description": "Get to know the people who grow your food. Q&A and networking.",
+        "price": 0.00,
+        "image": "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&q=80&w=800",
+        "date": "2026-09-25",
+        "location": "City Hall Courtyard",
+        "coordinates": {
+            "lat": 39.9612,
+            "lng": -82.9988
+        }
+    },
+    {
+        "id": "evt-011",
+        "category": "events",
+        "title": "Rooftop Garden Open Day",
+        "description": "Exclusive access to 5 private rooftop gardens usually closed to the public.",
+        "price": 30.00,
+        "image": "https://images.unsplash.com/photo-1588880331179-bc9b93a8cb5e?auto=format&fit=crop&q=80&w=800",
+        "date": "2026-06-25",
+        "location": "Skyline Tower",
+        "coordinates": {
+            "lat": 41.4993,
+            "lng": -81.6944
+        }
+    },
+    {
+        "id": "evt-012",
+        "category": "events",
+        "title": "Winter Planning Symposium",
+        "description": "Prepare your garden for the cold months and plan for next spring.",
+        "price": 20.00,
+        "image": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=800",
+        "date": "2026-11-15",
+        "location": "University Auditorium",
+        "coordinates": {
+            "lat": 36.1540,
+            "lng": -95.9928
+        }
+    }
+]

@@ -1,0 +1,268 @@
+### Urban Harvest Hub API Test File
+### Use with REST Client extension in VS Code or similar HTTP client
+### Base URL: http://localhost:3000/api
+
+@baseUrl = http://localhost:3000/api
+@token = YOUR_JWT_TOKEN_HERE
+
+### ============================================
+### HEALTH CHECK
+### ============================================
+
+GET {{baseUrl}}/health
+
+### ============================================
+### AUTHENTICATION
+### ============================================
+
+### Register new user
+POST {{baseUrl}}/auth/register
+Content-Type: application/json
+
+{
+  "username": "testuser",
+  "password": "testpass123",
+  "role": "user"
+}
+
+### Login (get JWT token)
+POST {{baseUrl}}/auth/login
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "admin123"
+}
+
+### ============================================
+### PRODUCTS (Public GET, Admin POST/PUT/DELETE)
+### ============================================
+
+### Get all products
+GET {{baseUrl}}/products
+
+### Get product by ID
+GET {{baseUrl}}/products/prod-001
+
+### Create product (Admin only)
+POST {{baseUrl}}/products
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "title": "Organic Tomato Seeds",
+  "description": "Premium heirloom tomato seeds for your garden",
+  "price": 12.99,
+  "category": "products",
+  "image": "https://images.unsplash.com/photo-1592841200221-a6898a05e22e",
+  "availability": "In Stock"
+}
+
+### Update product (Admin only)
+PUT {{baseUrl}}/products/prod-001
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "title": "Updated Product Title",
+  "description": "Updated description",
+  "price": 15.99,
+  "category": "products",
+  "image": "https://images.unsplash.com/photo-1592841200221-a6898a05e22e",
+  "availability": "In Stock"
+}
+
+### Delete product (Admin only)
+DELETE {{baseUrl}}/products/prod-001
+Authorization: Bearer {{token}}
+
+### ============================================
+### WORKSHOPS (Public GET, Admin POST/PUT/DELETE)
+### ============================================
+
+### Get all workshops
+GET {{baseUrl}}/workshops
+
+### Get workshop by ID
+GET {{baseUrl}}/workshops/wk-001
+
+### Create workshop (Admin only)
+POST {{baseUrl}}/workshops
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "title": "Composting Basics Workshop",
+  "description": "Learn the fundamentals of composting",
+  "price": 25.00,
+  "category": "workshops",
+  "image": "https://images.unsplash.com/photo-1464226184884-fa280b87c399",
+  "date": "2024-06-15",
+  "location": "Kandy, Sri Lanka",
+  "coordinates": {
+    "lat": 7.2906,
+    "lng": 80.6337
+  }
+}
+
+### Update workshop (Admin only)
+PUT {{baseUrl}}/workshops/wk-001
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "title": "Updated Workshop Title",
+  "description": "Updated description",
+  "price": 30.00,
+  "category": "workshops",
+  "image": "https://images.unsplash.com/photo-1464226184884-fa280b87c399",
+  "date": "2024-06-20",
+  "location": "Kandy, Sri Lanka",
+  "coordinates": {
+    "lat": 7.2906,
+    "lng": 80.6337
+  }
+}
+
+### Delete workshop (Admin only)
+DELETE {{baseUrl}}/workshops/wk-001
+Authorization: Bearer {{token}}
+
+### ============================================
+### EVENTS (Public GET, Admin POST/PUT/DELETE)
+### ============================================
+
+### Get all events
+GET {{baseUrl}}/events
+
+### Get event by ID
+GET {{baseUrl}}/events/evt-001
+
+### Create event (Admin only)
+POST {{baseUrl}}/events
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "title": "Community Garden Day",
+  "description": "Join us for a day of community gardening",
+  "price": 0,
+  "category": "events",
+  "image": "https://images.unsplash.com/photo-1488459716781-31db52582fe9",
+  "date": "2024-07-01",
+  "location": "Kandy, Sri Lanka",
+  "coordinates": {
+    "lat": 7.2906,
+    "lng": 80.6337
+  }
+}
+
+### Update event (Admin only)
+PUT {{baseUrl}}/events/evt-001
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "title": "Updated Event Title",
+  "description": "Updated description",
+  "price": 0,
+  "category": "events",
+  "image": "https://images.unsplash.com/photo-1488459716781-31db52582fe9",
+  "date": "2024-07-05",
+  "location": "Kandy, Sri Lanka",
+  "coordinates": {
+    "lat": 7.2906,
+    "lng": 80.6337
+  }
+}
+
+### Delete event (Admin only)
+DELETE {{baseUrl}}/events/evt-001
+Authorization: Bearer {{token}}
+
+### ============================================
+### BOOKINGS (Public POST, Protected GET, Admin CRUD)
+### ============================================
+
+### Create booking (Public - can be used by guests)
+POST {{baseUrl}}/bookings
+Content-Type: application/json
+
+{
+  "itemId": "wk-001",
+  "itemType": "workshop",
+  "userEmail": "user@example.com",
+  "userName": "John Doe",
+  "quantity": 2
+}
+
+### Get my bookings (Requires authentication)
+GET {{baseUrl}}/bookings/my-bookings
+Authorization: Bearer {{token}}
+
+### Get all bookings (Admin only)
+GET {{baseUrl}}/bookings
+Authorization: Bearer {{token}}
+
+### Get booking by ID (Admin only)
+GET {{baseUrl}}/bookings/BOOKING_ID_HERE
+Authorization: Bearer {{token}}
+
+### Update booking status (Admin only)
+PUT {{baseUrl}}/bookings/BOOKING_ID_HERE
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "status": "confirmed"
+}
+
+### Delete booking (Admin only)
+DELETE {{baseUrl}}/bookings/BOOKING_ID_HERE
+Authorization: Bearer {{token}}
+
+### ============================================
+### TESTING INVALID REQUESTS
+### ============================================
+
+### Invalid product creation (missing required fields)
+POST {{baseUrl}}/products
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "title": "",
+  "price": -10
+}
+
+### Invalid workshop creation (missing location)
+POST {{baseUrl}}/workshops
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "title": "Test Workshop",
+  "price": 20,
+  "date": "2024-06-15"
+}
+
+### Unauthorized access (no token)
+POST {{baseUrl}}/products
+Content-Type: application/json
+
+{
+  "title": "Test Product",
+  "price": 10.99,
+  "category": "products"
+}
+
+### Non-admin trying to create (should fail)
+POST {{baseUrl}}/products
+Authorization: Bearer USER_TOKEN_HERE
+Content-Type: application/json
+
+{
+  "title": "Test Product",
+  "price": 10.99,
+  "category": "products"
+}

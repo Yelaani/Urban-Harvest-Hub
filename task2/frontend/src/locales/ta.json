@@ -1,0 +1,286 @@
+{
+    "welcome": "Urban Harvest Hub- වෙත ல்வரவேற்கிறோம்",
+    "explore": "ஆராயுங்கள்",
+    "book_now": "முன்பதிவு செய்",
+    "login": "உள்நுழை",
+    "logout": "வெளியேறு",
+    "search_placeholder": "நிகழ்வுகள், தயாரிப்புகளைத் தேடுங்கள்...",
+    "categories": {
+        "all": "அனைத்தும்",
+        "workshops": "பட்டறைகள்",
+        "products": "தயாரிப்புகள்",
+        "events": "நிகழ்வுகள்"
+    },
+    "common": {
+        "loading": "ஏற்றப்படுகிறது...",
+        "error": "ஏதோ தவறு நடந்துவிட்டது",
+        "price": "விலை",
+        "date": "தேதி",
+        "location": "இடம்",
+        "in_stock": "கையிருப்பில் உள்ளது",
+        "available_now": "இப்போது கிடைக்கிறது",
+        "free": "இலவசம்",
+        "view_details": "விவரங்களைப் பார்க்க",
+        "view_all": "அனைத்தையும் காண்க",
+        "back": "பின்"
+    },
+    "home": {
+        "hero_title": "Urban Harvest Hub-க்கு வரவேற்கிறோம்",
+        "hero_subtitle": "நிலையான பட்டறைகள், சுற்றுச்சூழல் நட்பு தயாரிப்புகள் மற்றும் சமூக நிகழ்வுகளைக் கண்டறியவும்.",
+        "featured_title": "வகை வாரியாக ஆராயுங்கள்",
+        "visit_hub": "எங்கள் மையத்தைப் பார்வையிடவும்",
+        "get_directions": "வழிகளைப் பெற்று எங்கள் மையத்திற்கு எவ்வளவு தூரம் என்பதைச் சரிபார்க்கவும்.",
+        "cat_workshop_desc": "உரம் தயாரித்தல், தோட்டக்கலை மற்றும் பலவற்றை கற்றுக்கொள்ளுங்கள்.",
+        "cat_product_desc": "விதைகள், கருவிகள் மற்றும் நிலையான கருவிகள்.",
+        "cat_event_desc": "உங்கள் உள்ளூர் பசுமை சமூகத்துடன் இணையுங்கள்."
+    },
+    "footer": {
+        "about": "எங்களைப் பற்றி",
+        "workshops": "பட்டறைகள்",
+        "eco_products": "சுற்றுச்சூழல் தயாரிப்புகள்",
+        "contact": "தொடர்பு கொள்ள",
+        "quick_links": "விரைவு இணைப்புகள்",
+        "connect": "இணைக்கவும்",
+        "description": "நிலையான தோட்டக்கலை, சுற்றுச்சூழல் நட்பு நிகழ்வுகள் மற்றும் கரிம தயாரிப்புகளுடன் நகர்ப்புற சமூகங்களை இணைத்தல்.",
+        "rights": "©2028 Urban Harvest Hub. அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை."
+    },
+    "booking": {
+        "title": "முன்பதிவு பதிவு",
+        "empty_cart": "உங்கள் கூடை காலியாக உள்ளது",
+        "add_items_prompt": "முன்பதிவு செய்வதற்கு முன் பொருட்களைச் சேர்க்கவும்.",
+        "browse_collection": "தொகுப்பை உலாவுக",
+        "full_name": "முழு பெயர்",
+        "email": "மின்னஞ்சல் முகவரி",
+        "phone": "தொலைபேசி எண்",
+        "agree_terms": "சேவை விதிமுறைகள் மற்றும் தனியுரிமைக் கொள்கையை நான் ஒப்புக்கொள்கிறேன்.",
+        "proceed_checkout": "செக்அவுட்டுக்குச் செல்லவும்"
+    },
+    "bookings": {
+        "my_bookings": "எனது முன்பதிவுகள்",
+        "my_bookings_subtitle": "உங்கள் அனைத்து முந்தைய மற்றும் தற்போதைய முன்பதிவுகளைக் காண்க",
+        "no_bookings": "இதுவரை முன்பதிவுகள் இல்லை",
+        "no_bookings_description": "நீங்கள் இதுவரை எந்த முன்பதிவுகளையும் செய்யவில்லை. எங்கள் தொகுப்பை ஆராயத் தொடங்குங்கள்!",
+        "status_all": "அனைத்தும்",
+        "status_pending": "நிலுவையில்",
+        "status_confirmed": "உறுதிப்படுத்தப்பட்டது",
+        "status_cancelled": "ரத்துசெய்யப்பட்டது",
+        "quantity": "அளவு",
+        "booked_on": "முன்பதிவு செய்யப்பட்ட தேதி",
+        "item_deleted": "பொருள் இனி கிடைக்கவில்லை"
+    },
+    "location_hub": {
+        "title": "எங்கள் மையத்தைப் பார்வையிடவும்",
+        "city": "கண்டி, இலங்கை",
+        "description": "எங்கள் முக்கிய நிலையான தோட்டக்கலை மையத்திற்கு நீங்கள் எவ்வளவு நெருக்கமாக இருக்கிறீர்கள் என்பதைச் சரிபார்க்கவும்!",
+        "check_distance": "தூரத்தைச் சரிபார்க்கவும்",
+        "locating": "கண்டறிகிறது...",
+        "away": "கி.மீ தொலைவில்",
+        "error_geolocation": "உங்கள் உலாவி புவிஇருப்பிடத்தை ஆதரிக்கவில்லை",
+        "error_retrieve": "உங்கள் இருப்பிடத்தை மீட்டெடுக்க முடியவில்லை"
+    },
+    "data": {
+        "evt-001": {
+            "title": "Urban Gardening Workshop (TA)",
+            "description": "Learn the basics of setting up your own urban garden on a balcony or small space. (TA)"
+        },
+        "prod-001": {
+            "title": "Organic Basil Grow Kit (TA)",
+            "description": "Everything you need to grow fresh basil at home. Includes pot, soil, and seeds. (TA)"
+        },
+        "wk-001": {
+            "title": "Sustainable Composting Masterclass (TA)",
+            "description": "Deep dive into composting techniques for apartment dwellers. (TA)"
+        },
+        "prod-002": {
+            "title": "Heirloom Tomato Seeds (TA)",
+            "description": "Rare variety of tomato seeds, perfect for summer harvesting. (TA)"
+        },
+        "evt-002": {
+            "title": "Eco-Friendly Market Day (TA)",
+            "description": "Join us for a day of local produce and sustainable goods. (TA)"
+        },
+        "prod-003": {
+            "title": "Bamboo Garden Tool Set (TA)",
+            "description": "Essential gardening tools made from sustainable bamboo and recycled steel. (TA)"
+        },
+        "prod-004": {
+            "title": "Vertical Wall Planter (TA)",
+            "description": "Maximize your small space with this modular vertical planting system. (TA)"
+        },
+        "prod-005": {
+            "title": "Organic Vegetable Seeds (TA)",
+            "description": "Premium collection of organic vegetable seeds for your garden. Includes tomatoes, peppers, lettuce, and more. (TA)"
+        },
+        "prod-006": {
+            "title": "Ceramic Self-Watering Pot (TA)",
+            "description": "Stylish pot that takes care of watering for you. Perfect for busy plant parents. (TA)"
+        },
+        "prod-007": {
+            "title": "Solitary Bee Hotel (TA)",
+            "description": "Provide a safe nesting place for solitary bees and improve your garden's pollination. (TA)"
+        },
+        "prod-008": {
+            "title": "Oyster Mushroom Grow Kit (TA)",
+            "description": "Grow delicious gourmet mushrooms on your kitchen counter in just 10 days. (TA)"
+        },
+        "prod-009": {
+            "title": "Rainwater Collection Barrel (TA)",
+            "description": "Collect and store rainwater for your garden with this compact 50L barrel. (TA)"
+        },
+        "prod-010": {
+            "title": "Reusable Produce Bags (TA)",
+            "description": "Set of 5 organic cotton mesh bags for plastic-free grocery shopping. (TA)"
+        },
+        "prod-011": {
+            "title": "Heirloom Carrot Seeds (TA)",
+            "description": "Sweet and colorful mix of purple, yellow, and orange carrot seeds. (TA)"
+        },
+        "prod-012": {
+            "title": "Gardening Gloves (TA)",
+            "description": "Durable and breathable gloves made from recycled materials. (TA)"
+        },
+        "wk-002": {
+            "title": "Hydroponics for Beginners (TA)",
+            "description": "Learn how to grow plants without soil. Perfect for indoor urban farming. (TA)"
+        },
+        "wk-003": {
+            "title": "Urban Beekeeping 101 (TA)",
+            "description": "Introduction to keeping bees in the city. Safety, hives, and honey harvesting. (TA)"
+        },
+        "wk-004": {
+            "title": "DIY Natural Pest Control (TA)",
+            "description": "Protect your plants without harmful chemicals using natural remedies. (TA)"
+        },
+        "wk-005": {
+            "title": "Microgreens Masterclass (TA)",
+            "description": "Grow nutrient-packed microgreens on your windowsill year-round. (TA)"
+        },
+        "wk-006": {
+            "title": "Permaculture Principles (TA)",
+            "description": "Designing sustainable systems that mimic nature for your home and garden. (TA)"
+        },
+        "wk-007": {
+            "title": "Seed Saving Techniques (TA)",
+            "description": "Preserve biodiversity by learning how to harvest and store seeds properly. (TA)"
+        },
+        "wk-008": {
+            "title": "Container Gardening (TA)",
+            "description": "Strategies for growing abundance in pots, hanging baskets, and small boxes. (TA)"
+        },
+        "wk-009": {
+            "title": "Fermentation Basics (TA)",
+            "description": "Turn your garden harvest into probiotic-rich foods like sauerkraut and kimchi. (TA)"
+        },
+        "wk-010": {
+            "title": "Medicinal Herbs Strategy (TA)",
+            "description": "Growing and using healing herbs from your own garden. (TA)"
+        },
+        "wk-011": {
+            "title": "Soil Health & Regeneration (TA)",
+            "description": "Understand the microbial life in your soil and how to nurture it. (TA)"
+        },
+        "evt-003": {
+            "title": "Spring Seed Swap (TA)",
+            "description": "Bring your excess seeds and trade them with neighbors. Free event! (TA)"
+        },
+        "evt-004": {
+            "title": "Community Garden Cleanup (TA)",
+            "description": "Volunteer to help prepare our shared spaces for the growing season. (TA)"
+        },
+        "evt-005": {
+            "title": "Sustainability Fair 2026 (TA)",
+            "description": "Exhibitors, speakers, and demonstrations on living a greener life. (TA)"
+        },
+        "evt-006": {
+            "title": "Farm-to-Table Dinner (TA)",
+            "description": "A 4-course meal prepared by local chefs using ingredients grown within 10 miles. (TA)"
+        },
+        "evt-007": {
+            "title": "Urban Harvest Festival (TA)",
+            "description": "Celebrate the end of the season with music, food, and games. (TA)"
+        },
+        "evt-008": {
+            "title": "Green City Architecture Tour (TA)",
+            "description": "Walking tour highlighting the city's most sustainable buildings and rooftops. (TA)"
+        },
+        "evt-009": {
+            "title": "Kids Nature Scavenger Hunt (TA)",
+            "description": "Fun interactive activity for children to learn about local flora and fauna. (TA)"
+        },
+        "evt-010": {
+            "title": "Local Farmers Meet & Greet (TA)",
+            "description": "Get to know the people who grow your food. Q&A and networking. (TA)"
+        },
+        "evt-011": {
+            "title": "Rooftop Garden Open Day (TA)",
+            "description": "Exclusive access to 5 private rooftop gardens usually closed to the public. (TA)"
+        },
+        "evt-012": {
+            "title": "Winter Planning Symposium (TA)",
+            "description": "Prepare your garden for the cold months and plan for next spring. (TA)"
+        }
+    },
+    "admin": {
+        "title": "நிர்வாக டாஷ்போர்டு",
+        "subtitle": "தயாரிப்புகள், பட்டறைகள் மற்றும் நிகழ்வுகளை நிர்வகிக்கவும்",
+        "add_new": "புதியதைச் சேர்க்கவும்",
+        "edit": "திருத்து",
+        "create": "உருவாக்கு",
+        "update": "புதுப்பி",
+        "cancel": "ரத்துசெய்",
+        "delete": "நீக்கு",
+        "back": "பின்",
+        "delete_confirm": "இந்த உருப்படியை நிச்சயமாக நீக்க விரும்புகிறீர்களா?",
+        "search_placeholder": "தேடு...",
+        "all_status": "அனைத்து நிலைகளும்",
+        "in_stock": "கையிருப்பில் உள்ளது",
+        "out_of_stock": "கையிருப்பில் இல்லை",
+        "form": {
+            "title": "தலைப்பு",
+            "description": "விளக்கம்",
+            "price": "விலை",
+            "image_url": "பட URL",
+            "date": "தேதி",
+            "location": "இடம்",
+            "availability": "கிடைக்கும் தன்மை",
+            "coordinates": "Coordinates"
+        },
+        "users": {
+            "title": "பயனர் மேலாண்மை",
+            "search_placeholder": "பயனர்பெயர் அல்லது மின்னஞ்சல் மூலம் தேடவும்...",
+            "username": "பயனர்பெயர்",
+            "email": "மின்னஞ்சல்",
+            "role": "பங்கு",
+            "status": "நிலை",
+            "active_bookings": "செயலில் உள்ள முன்பதிவுகள்",
+            "registered": "பதிவு செய்யப்பட்ட தேதி",
+            "actions": "செயல்கள்",
+            "view_bookings": "முன்பதிவுகளைக் காண்க",
+            "delete_user": "பயனரை நீக்கு",
+            "suspend_user": "பயனரை இடைநிறுத்து",
+            "activate_user": "பயனரை செயல்படுத்து",
+            "promote_to_admin": "நிர்வாகியாக உயர்த்து",
+            "delete_confirm": "இந்த பயனரை நிச்சயமாக நீக்க விரும்புகிறீர்களா? இதை மாற்ற முடியாது.",
+            "suspend_confirm": "இந்த பயனரை நிச்சயமாக இடைநிறுத்த விரும்புகிறீர்களா? அவர்கள் உள்நுழைய முடியாது.",
+            "activate_confirm": "இந்த பயனர் கணக்கை செயல்படுத்தவா?",
+            "promote_confirm": "இந்த பயனரை நிர்வாகியாக உயர்த்த விரும்புகிறீர்களா? அவர்களுக்கு டாஷ்போர்டுக்கு முழு அணுகல் கிடைக்கும்.",
+            "status_active": "செயலில்",
+            "status_suspended": "இடைநிறுத்தப்பட்டது",
+            "role_user": "உறுப்பினர்",
+            "role_admin": "நிர்வாகி",
+            "cannot_delete_self": "உங்கள் சொந்த கணக்கை நீக்க முடியாது",
+            "user_deleted": "பயனர் வெற்றிகரமாக நீக்கப்பட்டார்",
+            "user_suspended": "பயனர் வெற்றிகரமாக இடைநிறுத்தப்பட்டார்",
+            "user_activated": "பயனர் வெற்றிகரமாக செயல்படுத்தப்பட்டார்",
+            "user_promoted": "பயனர் வெற்றிகரமாக நிர்வாகியாக உயர்த்தப்பட்டார்",
+            "offline_warning": "நீங்கள் ஆஃப்லைனில் உள்ளீர்கள். பயனர் மேலாண்மை செயல்கள் முடக்கப்பட்டுள்ளன.",
+            "bookings_modal_title": "பயனர் முன்பதிவுகள்",
+            "no_bookings": "இந்த பயனருக்கான பட்டறை முன்பதிவுகள் எதுவும் இல்லை.",
+            "booking_status": "நிலை",
+            "workshop_title": "பட்டறை",
+            "workshop_date": "தேதி",
+            "workshop_location": "இடம்",
+            "close": "மூடு"
+        }
+    }
+}

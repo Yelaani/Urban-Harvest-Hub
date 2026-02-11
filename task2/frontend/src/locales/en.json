@@ -1,0 +1,285 @@
+{
+    "welcome": "Welcome to Urban Harvest Hub",
+    "explore": "Explore",
+    "book_now": "Book Now",
+    "login": "Login",
+    "logout": "Logout",
+    "search_placeholder": "Search events, products...",
+    "categories": {
+        "all": "All",
+        "workshops": "Workshops",
+        "products": "Products",
+        "events": "Events"
+    },
+    "common": {
+        "loading": "Loading...",
+        "error": "Something went wrong",
+        "price": "Price",
+        "date": "Date",
+        "location": "Location",
+        "in_stock": "In Stock",
+        "available_now": "Available Now",
+        "free": "Free",
+        "view_details": "View Details",
+        "view_all": "View All"
+    },
+    "home": {
+        "hero_title": "Welcome to Urban Harvest Hub",
+        "hero_subtitle": "Discover sustainable workshops, eco-friendly products, and community events to bring nature into your city life.",
+        "featured_title": "Explore by Category",
+        "visit_hub": "Visit Our Hub",
+        "get_directions": "Get directions and check how close you are to our main center.",
+        "cat_workshop_desc": "Learn composting, gardening, and more.",
+        "cat_product_desc": "Seeds, tools, and sustainable kits.",
+        "cat_event_desc": "Connect with your local green community."
+    },
+    "footer": {
+        "about": "About Us",
+        "workshops": "Workshops",
+        "eco_products": "Eco Products",
+        "contact": "Contact",
+        "quick_links": "Quick Links",
+        "connect": "Connect",
+        "description": "Connecting urban communities with sustainable gardening, eco-friendly events, and organic products.",
+        "rights": "©2028 Urban Harvest Hub. All rights reserved."
+    },
+    "booking": {
+        "title": "Booking Registration",
+        "empty_cart": "Your Cart is Empty",
+        "add_items_prompt": "Please add items before booking.",
+        "browse_collection": "Browse Collection",
+        "full_name": "Full Name",
+        "email": "Email Address",
+        "phone": "Phone Number",
+        "agree_terms": "I agree to the Terms of Service and Privacy Policy.",
+        "proceed_checkout": "Proceed to Checkout"
+    },
+    "bookings": {
+        "my_bookings": "My Bookings",
+        "my_bookings_subtitle": "View all your past and current bookings",
+        "no_bookings": "No Bookings Yet",
+        "no_bookings_description": "You haven't made any bookings yet. Start exploring our collection!",
+        "status_all": "All",
+        "status_pending": "Pending",
+        "status_confirmed": "Confirmed",
+        "status_cancelled": "Cancelled",
+        "quantity": "Quantity",
+        "booked_on": "Booked on",
+        "item_deleted": "Item no longer available"
+    },
+    "location_hub": {
+        "title": "Visit Our Hub",
+        "city": "Kandy, Sri Lanka",
+        "description": "Check how close you are to our main sustainable gardening center!",
+        "check_distance": "Check Distance",
+        "locating": "Locating...",
+        "away": "km away",
+        "error_geolocation": "Geolocation is not supported by your browser",
+        "error_retrieve": "Unable to retrieve your location"
+    },
+    "data": {
+        "evt-001": {
+            "title": "Urban Gardening Workshop",
+            "description": "Learn the basics of setting up your own urban garden on a balcony or small space."
+        },
+        "prod-001": {
+            "title": "Organic Basil Grow Kit",
+            "description": "Everything you need to grow fresh basil at home. Includes pot, soil, and seeds."
+        },
+        "wk-001": {
+            "title": "Sustainable Composting Masterclass",
+            "description": "Deep dive into composting techniques for apartment dwellers."
+        },
+        "prod-002": {
+            "title": "Heirloom Tomato Seeds",
+            "description": "Rare variety of tomato seeds, perfect for summer harvesting."
+        },
+        "evt-002": {
+            "title": "Eco-Friendly Market Day",
+            "description": "Join us for a day of local produce and sustainable goods."
+        },
+        "prod-003": {
+            "title": "Bamboo Garden Tool Set",
+            "description": "Essential gardening tools made from sustainable bamboo and recycled steel."
+        },
+        "prod-004": {
+            "title": "Vertical Wall Planter",
+            "description": "Maximize your small space with this modular vertical planting system."
+        },
+        "prod-005": {
+            "title": "Organic Vegetable Seeds",
+            "description": "Premium collection of organic vegetable seeds for your garden. Includes tomatoes, peppers, lettuce, and more."
+        },
+        "prod-006": {
+            "title": "Ceramic Self-Watering Pot",
+            "description": "Stylish pot that takes care of watering for you. Perfect for busy plant parents."
+        },
+        "prod-007": {
+            "title": "Solitary Bee Hotel",
+            "description": "Provide a safe nesting place for solitary bees and improve your garden's pollination."
+        },
+        "prod-008": {
+            "title": "Oyster Mushroom Grow Kit",
+            "description": "Grow delicious gourmet mushrooms on your kitchen counter in just 10 days."
+        },
+        "prod-009": {
+            "title": "Rainwater Collection Barrel",
+            "description": "Collect and store rainwater for your garden with this compact 50L barrel."
+        },
+        "prod-010": {
+            "title": "Reusable Produce Bags",
+            "description": "Set of 5 organic cotton mesh bags for plastic-free grocery shopping."
+        },
+        "prod-011": {
+            "title": "Heirloom Carrot Seeds",
+            "description": "Sweet and colorful mix of purple, yellow, and orange carrot seeds."
+        },
+        "prod-012": {
+            "title": "Gardening Gloves",
+            "description": "Durable and breathable gloves made from recycled materials."
+        },
+        "wk-002": {
+            "title": "Hydroponics for Beginners",
+            "description": "Learn how to grow plants without soil. Perfect for indoor urban farming."
+        },
+        "wk-003": {
+            "title": "Urban Beekeeping 101",
+            "description": "Introduction to keeping bees in the city. Safety, hives, and honey harvesting."
+        },
+        "wk-004": {
+            "title": "DIY Natural Pest Control",
+            "description": "Protect your plants without harmful chemicals using natural remedies."
+        },
+        "wk-005": {
+            "title": "Microgreens Masterclass",
+            "description": "Grow nutrient-packed microgreens on your windowsill year-round."
+        },
+        "wk-006": {
+            "title": "Permaculture Principles",
+            "description": "Designing sustainable systems that mimic nature for your home and garden."
+        },
+        "wk-007": {
+            "title": "Seed Saving Techniques",
+            "description": "Preserve biodiversity by learning how to harvest and store seeds properly."
+        },
+        "wk-008": {
+            "title": "Container Gardening",
+            "description": "Strategies for growing abundance in pots, hanging baskets, and small boxes."
+        },
+        "wk-009": {
+            "title": "Fermentation Basics",
+            "description": "Turn your garden harvest into probiotic-rich foods like sauerkraut and kimchi."
+        },
+        "wk-010": {
+            "title": "Medicinal Herbs Strategy",
+            "description": "Growing and using healing herbs from your own garden."
+        },
+        "wk-011": {
+            "title": "Soil Health & Regeneration",
+            "description": "Understand the microbial life in your soil and how to nurture it."
+        },
+        "evt-003": {
+            "title": "Spring Seed Swap",
+            "description": "Bring your excess seeds and trade them with neighbors. Free event!"
+        },
+        "evt-004": {
+            "title": "Community Garden Cleanup",
+            "description": "Volunteer to help prepare our shared spaces for the growing season."
+        },
+        "evt-005": {
+            "title": "Sustainability Fair 2026",
+            "description": "Exhibitors, speakers, and demonstrations on living a greener life."
+        },
+        "evt-006": {
+            "title": "Farm-to-Table Dinner",
+            "description": "A 4-course meal prepared by local chefs using ingredients grown within 10 miles."
+        },
+        "evt-007": {
+            "title": "Urban Harvest Festival",
+            "description": "Celebrate the end of the season with music, food, and games."
+        },
+        "evt-008": {
+            "title": "Green City Architecture Tour",
+            "description": "Walking tour highlighting the city's most sustainable buildings and rooftops."
+        },
+        "evt-009": {
+            "title": "Kids Nature Scavenger Hunt",
+            "description": "Fun interactive activity for children to learn about local flora and fauna."
+        },
+        "evt-010": {
+            "title": "Local Farmers Meet & Greet",
+            "description": "Get to know the people who grow your food. Q&A and networking."
+        },
+        "evt-011": {
+            "title": "Rooftop Garden Open Day",
+            "description": "Exclusive access to 5 private rooftop gardens usually closed to the public."
+        },
+        "evt-012": {
+            "title": "Winter Planning Symposium",
+            "description": "Prepare your garden for the cold months and plan for next spring."
+        }
+    },
+    "admin": {
+        "title": "Admin Dashboard",
+        "subtitle": "Manage products, workshops, and events",
+        "add_new": "Add New",
+        "edit": "Edit",
+        "create": "Create",
+        "update": "Update",
+        "cancel": "Cancel",
+        "delete": "Delete",
+        "back": "Back",
+        "delete_confirm": "Are you sure you want to delete this item?",
+        "search_placeholder": "Search...",
+        "all_status": "All Status",
+        "in_stock": "In Stock",
+        "out_of_stock": "Out of Stock",
+        "form": {
+            "title": "Title",
+            "description": "Description",
+            "price": "Price",
+            "image_url": "Image URL",
+            "date": "Date",
+            "location": "Location",
+            "availability": "Availability",
+            "coordinates": "Coordinates"
+        },
+        "users": {
+            "title": "User Management",
+            "search_placeholder": "Search by username or email...",
+            "username": "Username",
+            "email": "Email",
+            "role": "Role",
+            "status": "Status",
+            "active_bookings": "Active Bookings",
+            "registered": "Registered",
+            "actions": "Actions",
+            "view_bookings": "View Bookings",
+            "delete_user": "Delete User",
+            "suspend_user": "Suspend User",
+            "activate_user": "Activate User",
+            "promote_to_admin": "Promote to Admin",
+            "delete_confirm": "Are you sure you want to delete this user? This action cannot be undone.",
+            "suspend_confirm": "Are you sure you want to suspend this user? They will not be able to login.",
+            "activate_confirm": "Activate this user account?",
+            "promote_confirm": "Are you sure you want to promote this user to Admin? They will have full access to the dashboard.",
+            "status_active": "Active",
+            "status_suspended": "Suspended",
+            "role_user": "Member",
+            "role_admin": "Admin",
+            "cannot_delete_self": "You cannot delete your own account",
+            "user_deleted": "User deleted successfully",
+            "user_suspended": "User suspended successfully",
+            "user_activated": "User activated successfully",
+            "user_promoted": "User promoted to Admin successfully",
+            "offline_warning": "You are offline. User management actions are disabled.",
+            "bookings_modal_title": "User Bookings",
+            "no_bookings": "No workshop bookings found for this user.",
+            "booking_status": "Status",
+            "workshop_title": "Workshop",
+            "workshop_date": "Date",
+            "workshop_location": "Location",
+            "close": "Close"
+        }
+    }
+}

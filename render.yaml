@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: urban-harvest-hub-api
+    env: node
+    rootDir: task2/server
+    buildCommand: npm install
+    startCommand: node index.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: JWT_SECRET
+        sync: false  # Set manually in Render dashboard
+      - key: FRONTEND_URL
+        sync: false  # Set manually after Vercel deployment
+      - key: VAPID_PUBLIC_KEY
+        sync: false  # Optional
+      - key: VAPID_PRIVATE_KEY
+        sync: false  # Optional
+    healthCheckPath: /api/health

@@ -1,0 +1,286 @@
+{
+    "welcome": "Urban Harvest Hub වෙත සාදරයෙන් පිළිගනිමු",
+    "explore": "ගවේෂණය කරන්න",
+    "book_now": "දැන් වෙන්කරවා ගන්න",
+    "login": "පිවිසෙන්න",
+    "logout": "පිටවන්න",
+    "search_placeholder": "සිදුවීම්, නිෂ්පාදන සොයන්න...",
+    "categories": {
+        "all": "සියල්ල",
+        "workshops": "වැඩමුළු",
+        "products": "නිෂ්පාදන",
+        "events": "සිදුවීම්"
+    },
+    "common": {
+        "loading": "පූරණය වෙමින්...",
+        "error": "යම් දෝෂයක් සිදුවී ඇත",
+        "price": "මිල",
+        "date": "දිනය",
+        "location": "ස්ථානය",
+        "in_stock": "තොග ඇත",
+        "available_now": "දැන් ලබා ගත හැක",
+        "free": "නොමිලේ",
+        "view_details": "විස්තර බලන්න",
+        "view_all": "සියල්ල බලන්න",
+        "back": "ආපසු"
+    },
+    "home": {
+        "hero_title": "Urban Harvest Hub වෙත සාදරයෙන් පිළිගනිමු",
+        "hero_subtitle": "තිරසාර වැඩමුළු, පරිසර හිතකාමී නිෂ්පාදන සහ ප්‍රජා වැඩසටහන් සොයා ගන්න.",
+        "featured_title": "වර්ගය අනුව සොයන්න",
+        "visit_hub": "අපගේ මධ්‍යස්ථානයට පිවිසෙන්න",
+        "get_directions": "දිශාවන් ලබාගෙන අපගේ මධ්‍යස්ථානයට ඇති දුර පරීක්ෂා කරන්න.",
+        "cat_workshop_desc": "කොම්පෝස්ට් සැකසීම, ගෙවතු වගාව සහ තවත් බොහෝ දේ ඉගෙන ගන්න.",
+        "cat_product_desc": "බීජ, මෙවලම් සහ තිරසාර කට්ටල.",
+        "cat_event_desc": "ඔබේ දේශීය හරිත ප්‍රජාව සමඟ සම්බන්ධ වන්න."
+    },
+    "footer": {
+        "about": "අපි ගැන",
+        "workshops": "වැඩමුළු",
+        "eco_products": "පරිසර හිතකාමී නිෂ්පාදන",
+        "contact": "සම්බන්ධ වන්න",
+        "quick_links": "ඉක්මන් සබැඳි",
+        "connect": "සම්බන්ධ වන්න",
+        "description": "තිරසාර ගෙවතු වගාව, පරිසර හිතකාමී වැඩසටහන් සහ කාබනික නිෂ්පාදන සමඟ නාගරික ප්‍රජාවන් සම්බන්ධ කිරීම.",
+        "rights": "©2028 Urban Harvest Hub. සියලුම හිමිකම් ඇවිරිණි."
+    },
+    "booking": {
+        "title": "වෙන්කරවා ගැනීමේ ලියාපදිංචිය",
+        "empty_cart": "ඔබගේ කූඩය හිස්ය",
+        "add_items_prompt": "කරුණාකර වෙන්කරවා ගැනීමට පෙර අයිතම එකතු කරන්න.",
+        "browse_collection": "එකතුව පිරික්සන්න",
+        "full_name": "සම්පූර්ණ නම",
+        "email": "විද්‍යුත් තැපැල් ලිපිනය",
+        "phone": "දුරකථන අංකය",
+        "agree_terms": "මම සේවා කොන්දේසි සහ පුද්ගලිකත්ව ප්‍රතිපත්තියට එකඟ වෙමි.",
+        "proceed_checkout": "මුදල් ගෙවීමට යන්න"
+    },
+    "bookings": {
+        "my_bookings": "මගේ වෙන්කරවා ගැනීම්",
+        "my_bookings_subtitle": "ඔබගේ සියලුම පෙර සහ වර්තමාන වෙන්කරවා ගැනීම් බලන්න",
+        "no_bookings": "තවමත් වෙන්කරවා ගැනීම් නැත",
+        "no_bookings_description": "ඔබ තවමත් වෙන්කරවා ගැනීම් කර නැත. අපගේ එකතුව ගවේෂණය කිරීම ආරම්භ කරන්න!",
+        "status_all": "සියල්ල",
+        "status_pending": "පොරොත්තුවෙන්",
+        "status_confirmed": "තහවුරු කරන ලදී",
+        "status_cancelled": "අවලංගු කරන ලදී",
+        "quantity": "ප්‍රමාණය",
+        "booked_on": "වෙන්කරවා ගත් දිනය",
+        "item_deleted": "අයිතමය තවමත් ලබා ගත නොහැක"
+    },
+    "location_hub": {
+        "title": "අපගේ මධ්‍යස්ථානයට පිවිසෙන්න",
+        "city": "මහනුවර, ශ්‍රී ලංකාව",
+        "description": "අපගේ ප්‍රධාන තිරසාර ගෙවතු වගා මධ්‍යස්ථානයට ඔබ කොපමණ සමීපදැයි පරීක්ෂා කරන්න!",
+        "check_distance": "දුර පරීක්ෂා කරන්න",
+        "locating": "ස්ථානගත කරමින්...",
+        "away": "කි.මී. දුරින්",
+        "error_geolocation": "ඔබගේ බ්‍රව්සරය භූ ස්ථානගත කිරීම සදහා සහාය නොදක්වයි",
+        "error_retrieve": "ඔබගේ ස්ථානය ලබා ගැනීමට නොහැකි විය"
+    },
+    "data": {
+        "evt-001": {
+            "title": "Urban Gardening Workshop (SI)",
+            "description": "Learn the basics of setting up your own urban garden on a balcony or small space. (SI)"
+        },
+        "prod-001": {
+            "title": "Organic Basil Grow Kit (SI)",
+            "description": "Everything you need to grow fresh basil at home. Includes pot, soil, and seeds. (SI)"
+        },
+        "wk-001": {
+            "title": "Sustainable Composting Masterclass (SI)",
+            "description": "Deep dive into composting techniques for apartment dwellers. (SI)"
+        },
+        "prod-002": {
+            "title": "Heirloom Tomato Seeds (SI)",
+            "description": "Rare variety of tomato seeds, perfect for summer harvesting. (SI)"
+        },
+        "evt-002": {
+            "title": "Eco-Friendly Market Day (SI)",
+            "description": "Join us for a day of local produce and sustainable goods. (SI)"
+        },
+        "prod-003": {
+            "title": "Bamboo Garden Tool Set (SI)",
+            "description": "Essential gardening tools made from sustainable bamboo and recycled steel. (SI)"
+        },
+        "prod-004": {
+            "title": "Vertical Wall Planter (SI)",
+            "description": "Maximize your small space with this modular vertical planting system. (SI)"
+        },
+        "prod-005": {
+            "title": "Organic Vegetable Seeds (SI)",
+            "description": "Premium collection of organic vegetable seeds for your garden. Includes tomatoes, peppers, lettuce, and more. (SI)"
+        },
+        "prod-006": {
+            "title": "Ceramic Self-Watering Pot (SI)",
+            "description": "Stylish pot that takes care of watering for you. Perfect for busy plant parents. (SI)"
+        },
+        "prod-007": {
+            "title": "Solitary Bee Hotel (SI)",
+            "description": "Provide a safe nesting place for solitary bees and improve your garden's pollination. (SI)"
+        },
+        "prod-008": {
+            "title": "Oyster Mushroom Grow Kit (SI)",
+            "description": "Grow delicious gourmet mushrooms on your kitchen counter in just 10 days. (SI)"
+        },
+        "prod-009": {
+            "title": "Rainwater Collection Barrel (SI)",
+            "description": "Collect and store rainwater for your garden with this compact 50L barrel. (SI)"
+        },
+        "prod-010": {
+            "title": "Reusable Produce Bags (SI)",
+            "description": "Set of 5 organic cotton mesh bags for plastic-free grocery shopping. (SI)"
+        },
+        "prod-011": {
+            "title": "Heirloom Carrot Seeds (SI)",
+            "description": "Sweet and colorful mix of purple, yellow, and orange carrot seeds. (SI)"
+        },
+        "prod-012": {
+            "title": "Gardening Gloves (SI)",
+            "description": "Durable and breathable gloves made from recycled materials. (SI)"
+        },
+        "wk-002": {
+            "title": "Hydroponics for Beginners (SI)",
+            "description": "Learn how to grow plants without soil. Perfect for indoor urban farming. (SI)"
+        },
+        "wk-003": {
+            "title": "Urban Beekeeping 101 (SI)",
+            "description": "Introduction to keeping bees in the city. Safety, hives, and honey harvesting. (SI)"
+        },
+        "wk-004": {
+            "title": "DIY Natural Pest Control (SI)",
+            "description": "Protect your plants without harmful chemicals using natural remedies. (SI)"
+        },
+        "wk-005": {
+            "title": "Microgreens Masterclass (SI)",
+            "description": "Grow nutrient-packed microgreens on your windowsill year-round. (SI)"
+        },
+        "wk-006": {
+            "title": "Permaculture Principles (SI)",
+            "description": "Designing sustainable systems that mimic nature for your home and garden. (SI)"
+        },
+        "wk-007": {
+            "title": "Seed Saving Techniques (SI)",
+            "description": "Preserve biodiversity by learning how to harvest and store seeds properly. (SI)"
+        },
+        "wk-008": {
+            "title": "Container Gardening (SI)",
+            "description": "Strategies for growing abundance in pots, hanging baskets, and small boxes. (SI)"
+        },
+        "wk-009": {
+            "title": "Fermentation Basics (SI)",
+            "description": "Turn your garden harvest into probiotic-rich foods like sauerkraut and kimchi. (SI)"
+        },
+        "wk-010": {
+            "title": "Medicinal Herbs Strategy (SI)",
+            "description": "Growing and using healing herbs from your own garden. (SI)"
+        },
+        "wk-011": {
+            "title": "Soil Health & Regeneration (SI)",
+            "description": "Understand the microbial life in your soil and how to nurture it. (SI)"
+        },
+        "evt-003": {
+            "title": "Spring Seed Swap (SI)",
+            "description": "Bring your excess seeds and trade them with neighbors. Free event! (SI)"
+        },
+        "evt-004": {
+            "title": "Community Garden Cleanup (SI)",
+            "description": "Volunteer to help prepare our shared spaces for the growing season. (SI)"
+        },
+        "evt-005": {
+            "title": "Sustainability Fair 2026 (SI)",
+            "description": "Exhibitors, speakers, and demonstrations on living a greener life. (SI)"
+        },
+        "evt-006": {
+            "title": "Farm-to-Table Dinner (SI)",
+            "description": "A 4-course meal prepared by local chefs using ingredients grown within 10 miles. (SI)"
+        },
+        "evt-007": {
+            "title": "Urban Harvest Festival (SI)",
+            "description": "Celebrate the end of the season with music, food, and games. (SI)"
+        },
+        "evt-008": {
+            "title": "Green City Architecture Tour (SI)",
+            "description": "Walking tour highlighting the city's most sustainable buildings and rooftops. (SI)"
+        },
+        "evt-009": {
+            "title": "Kids Nature Scavenger Hunt (SI)",
+            "description": "Fun interactive activity for children to learn about local flora and fauna. (SI)"
+        },
+        "evt-010": {
+            "title": "Local Farmers Meet & Greet (SI)",
+            "description": "Get to know the people who grow your food. Q&A and networking. (SI)"
+        },
+        "evt-011": {
+            "title": "Rooftop Garden Open Day (SI)",
+            "description": "Exclusive access to 5 private rooftop gardens usually closed to the public. (SI)"
+        },
+        "evt-012": {
+            "title": "Winter Planning Symposium (SI)",
+            "description": "Prepare your garden for the cold months and plan for next spring. (SI)"
+        }
+    },
+    "admin": {
+        "title": "පරිපාලක පුවරුව",
+        "subtitle": "නිෂ්පාදන, වැඩමුළු සහ සිදුවීම් කළමනාකරණය කරන්න",
+        "add_new": "නව එකක් එක් කරන්න",
+        "edit": "සංස්කරණය",
+        "create": "සාදන්න",
+        "update": "යාවත්කාලීන කරන්න",
+        "cancel": "අවලංගු කරන්න",
+        "delete": "මකන්න",
+        "back": "ආපසු",
+        "delete_confirm": "ඔබට මෙම අයිතමය මකා දැමීමට අවශ්‍ය බව විශ්වාසද?",
+        "search_placeholder": "සොයන්න...",
+        "all_status": "සියලුම තත්වයන්",
+        "in_stock": "තොග ඇත",
+        "out_of_stock": "තොග අවසන්",
+        "form": {
+            "title": "මාතෘකාව",
+            "description": "විස්තරය",
+            "price": "මිල",
+            "image_url": "පින්තූර URL",
+            "date": "දිනය",
+            "location": "ස්ථානය",
+            "availability": "ලබා ගත හැකි බව",
+            "coordinates": "Coordinates"
+        },
+        "users": {
+            "title": "පරිශීලක කළමනාකරණය",
+            "search_placeholder": "පරිශීලක නාමය හෝ විද්‍යුත් තැපෑල අනුව සොයන්න...",
+            "username": "පරිශීලක නාමය",
+            "email": "විද්‍යුත් තැපෑල",
+            "role": "භූමිකාව",
+            "status": "තත්වය",
+            "active_bookings": "සක්‍රිය වෙන්කරවා ගැනීම්",
+            "registered": "ලියාපදිංචි වූ දිනය",
+            "actions": "ක්‍රියාමාර්ග",
+            "view_bookings": "වෙන්කරවා ගැනීම් බලන්න",
+            "delete_user": "පරිශීලකයා මකන්න",
+            "suspend_user": "පරිශීලකයා අත්හිටුවන්න",
+            "activate_user": "පරිශීලකයා සක්‍රිය කරන්න",
+            "promote_to_admin": "පරිපාලක බවට උසස් කරන්න",
+            "delete_confirm": "ඔබට මෙම පරිශීලකයා මකා දැමීමට අවශ්‍ය බව විශ්වාසද? මෙය අහෝසි කළ නොහැක.",
+            "suspend_confirm": "ඔබට මෙම පරිශීලකයා අත්හිටුවීමට අවශ්‍ය බව විශ්වාසද? ඔවුන්ට පිවිසීමට නොහැකි වනු ඇත.",
+            "activate_confirm": "මෙම පරිශීලක ගිණුම සක්‍රිය කරන්නද?",
+            "promote_confirm": "ඔබට මෙම පරිශීලකයා පරිපාලක බවට උසස් කිරීමට අවශ්‍ය බව විශ්වාසද? ඔවුන්ට පුවරුවට සම්පූර්ණ ප්‍රවේශය ලැබෙනු ඇත.",
+            "status_active": "සක්‍රිය",
+            "status_suspended": "අත්හිටුවා ඇත",
+            "role_user": "සාමාජික",
+            "role_admin": "පරිපාලක",
+            "cannot_delete_self": "ඔබට ඔබගේම ගිණුම මකා දැමිය නොහැක",
+            "user_deleted": "පරිශීලකයා සාර්ථකව මකා දමන ලදී",
+            "user_suspended": "පරිශීලකයා සාර්ථකව අත්හිටුවන ලදී",
+            "user_activated": "පරිශීලකයා සාර්ථකව සක්‍රිය කරන ලදී",
+            "user_promoted": "පරිශීලකයා සාර්ථකව පරිපාලක බවට උසස් කරන ලදී",
+            "offline_warning": "ඔබ නොබැඳිව සිටී. පරිශීලක කළමනාකරණ ක්‍රියාමාර්ග අක්‍රිය කර ඇත.",
+            "bookings_modal_title": "පරිශීලක වෙන්කරවා ගැනීම්",
+            "no_bookings": "මෙම පරිශීලකයා සඳහා වැඩමුළු වෙන්කරවා ගැනීම් හමු නොවීය.",
+            "booking_status": "තත්වය",
+            "workshop_title": "වැඩමුළුව",
+            "workshop_date": "දිනය",
+            "workshop_location": "ස්ථානය",
+            "close": "වසන්න"
+        }
+    }
+}
