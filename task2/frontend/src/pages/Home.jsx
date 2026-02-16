@@ -48,13 +48,13 @@ const Home = () => {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <CategoryCard
                         title={t('categories.workshops')}
-                        image={null}
+                        image="https://orangadevelopment.co.nz/public/assets/blog-image/2023-05/J001770-OR1-Oranga-Community-Garden-Workshop-2_1MB.jpeg"
                         link="/explore/workshops"
                         desc={t('home.cat_workshop_desc')}
                     />
                     <CategoryCard
                         title={t('categories.products')}
-                        image={null}
+                        image="https://cavemanorganics.pk/cdn/shop/articles/pixelcut-export_fb8a1cef-ce02-40b5-ae4d-1cb42965945b.jpg?v=1713979861"
                         link="/explore/products"
                         desc={t('home.cat_product_desc')}
                     />
