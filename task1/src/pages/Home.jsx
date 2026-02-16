@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight, Leaf } from 'lucide-react';
+import { ArrowRight, Leaf, MapPin } from 'lucide-react';
 import LocationHub from '../components/LocationHub';
 
 const Home = () => {
@@ -28,18 +28,18 @@ const Home = () => {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <CategoryCard
                         title="Workshops"
-                        image="https://images.unsplash.com/photo-1591857177580-dc82b9ac4e10?auto=format&fit=crop&q=80"
+                        image="https://orangadevelopment.co.nz/public/assets/blog-image/2023-05/J001770-OR1-Oranga-Community-Garden-Workshop-2_1MB.jpeg"
                         link="/explore/workshops"
                         desc="Learn composting, gardening, and more."
                     />
                     <CategoryCard
-                        title="Eco Products"
-                        image="https://images.unsplash.com/photo-1615486511484-92e172cc416d?auto=format&fit=crop&q=80"
+                        title="Products"
+                        image="https://cavemanorganics.pk/cdn/shop/articles/pixelcut-export_fb8a1cef-ce02-40b5-ae4d-1cb42965945b.jpg?v=1713979861"
                         link="/explore/products"
                         desc="Seeds, tools, and sustainable kits."
                     />
                     <CategoryCard
-                        title="Community Events"
+                        title="Events"
                         image="https://images.unsplash.com/photo-1488459716781-31db52582fe9?auto=format&fit=crop&q=80"
                         link="/explore/events"
                         desc="Connect with your local green community."
@@ -48,13 +48,37 @@ const Home = () => {
             </section>
 
             {/* Location Hub */}
-            <section className="relative bg-slate-50 dark:bg-slate-900 py-16 px-4 overflow-hidden">
-                {/* Background Image - Lightly blurred */}
-                <div className="absolute inset-0 opacity-30 dark:opacity-20 bg-[url('https://images.unsplash.com/photo-1416879741263-d301e1e50c70?auto=format&fit=crop&q=80&w=1920')] bg-cover bg-center blur-sm" />
-                <div className="relative max-w-7xl mx-auto text-center z-10">
-                    <h2 className="text-3xl font-bold text-slate-800 dark:text-white mb-6">Visit Our Hub</h2>
-                    <p className="text-slate-600 dark:text-slate-300 mb-8">Get directions and check how close you are to our main center.</p>
-                    <LocationHub />
+            <section className="bg-[#f0f9f4] dark:bg-slate-900/40 py-20 px-4 border-y border-green-100 dark:border-slate-800 relative overflow-hidden">
+                <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/4 w-96 h-96 bg-green-200/20 rounded-full blur-3xl -z-10" />
+                <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
+                    <div className="text-left">
+                        <div className="inline-flex items-center px-3 py-1 bg-green-100 dark:bg-green-900/30 text-urban-green dark:text-green-400 rounded-full text-sm font-semibold mb-4">
+                            <MapPin className="w-4 h-4 mr-2" />
+                            KANDY, SRI LANKA
+                        </div>
+                        <h2 className="text-4xl md:text-5xl font-bold text-slate-800 dark:text-white mb-6 leading-tight font-outfit">
+                            Visit Our Hub
+                        </h2>
+                        <p className="text-lg text-slate-600 dark:text-slate-300 mb-8 max-w-xl">
+                            Get directions and check how close you are to our main center.
+                        </p>
+                        <div className="flex items-center gap-4 text-sm text-slate-500 dark:text-slate-400">
+                            <div className="flex -space-x-2">
+                                {[1, 2, 3].map((i) => (
+                                    <img
+                                        key={i}
+                                        src={`https://i.pravatar.cc/100?img=${i + 10}`}
+                                        className="w-8 h-8 rounded-full border-2 border-white dark:border-slate-800"
+                                        alt="User"
+                                    />
+                                ))}
+                            </div>
+                            <span>500+ visitors this month</span>
+                        </div>
+                    </div>
+                    <div className="flex justify-center lg:justify-end">
+                        <LocationHub />
+                    </div>
                 </div>
             </section>
         </div>
@@ -62,56 +86,20 @@ const Home = () => {
 };
 
 const CategoryCard = ({ title, image, link, desc }) => {
-    // For Workshops and Eco Products, use dark cards with green icons
-    if (title === 'Workshops' || title === 'Eco Products') {
-        return (
-            <Link to={link}>
-                <article className="rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden bg-slate-100 dark:bg-slate-800 aspect-[4/3] flex flex-col justify-between p-6">
-                    <div className="flex flex-col items-start">
-                        <div className="flex items-center mb-4">
-                            <Leaf className="w-5 h-5 text-urban-green dark:text-green-400 mr-2" />
-                            <span className="text-urban-green dark:text-green-400 text-sm font-medium">{title}</span>
-                        </div>
-                        <h3 className="text-2xl font-bold text-slate-800 dark:text-white mb-2">{title}</h3>
-                    </div>
-                    <div className="mt-auto">
-                        <div className="inline-flex items-center text-urban-green font-semibold text-sm hover:text-green-700 dark:hover:text-green-400 transition-colors">
-                            VIEW ALL
-                            <ArrowRight className="w-4 h-4 ml-1" />
-                        </div>
-                    </div>
-                </article>
-            </Link>
-        );
-    }
-    
-    // For Community Events, use image card
     return (
-        <article className="rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden">
-            <Link to={link} className="group block relative">
-                {/* Image Section */}
-                <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
-                    <img 
-                        src={image} 
-                        alt={title} 
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
-                    />
-                    
-                    {/* Gradient Overlay at Bottom for Text - Larger area */}
-                    <div className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-white/95 dark:from-slate-900/95 via-white/85 dark:via-slate-900/85 to-white/40 dark:to-slate-900/40" />
-                    
-                    {/* Text Content Overlay */}
-                    <div className="absolute bottom-0 left-0 right-0 p-6 z-10">
-                        <h3 className="text-2xl font-bold text-slate-800 dark:text-white mb-2">{title}</h3>
-                        <div className="inline-flex items-center text-urban-green font-semibold text-sm hover:text-green-700 dark:hover:text-green-400 transition-colors group/link">
-                            VIEW ALL
-                            <ArrowRight className="w-4 h-4 ml-1 group-hover/link:translate-x-1 transition-transform" />
-                        </div>
-                    </div>
-                </div>
-            </Link>
-        </article>
+        <Link to={link} className="group relative rounded-xl overflow-hidden aspect-[4/3] shadow-md hover:shadow-xl transition-all">
+            <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors z-10" />
+            <img src={image} alt={title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+            <div className="absolute bottom-0 left-0 p-6 z-20 text-white">
+                <h3 className="text-2xl font-bold mb-2">{title}</h3>
+                <p className="text-slate-200 text-sm mb-4 opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-2 group-hover:translate-y-0 duration-300">{desc}</p>
+                <span className="text-green-400 font-bold flex items-center text-sm uppercase tracking-wider">
+                    VIEW ALL <ArrowRight className="w-4 h-4 ml-1" />
+                </span>
+            </div>
+        </Link>
     );
 };
 
 export default Home;
+

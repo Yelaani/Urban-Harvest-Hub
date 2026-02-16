@@ -62,51 +62,76 @@ const LocationHub = () => {
     };
 
     return (
-        <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-6 border border-slate-200 dark:border-slate-700 max-w-sm w-full mx-auto my-8">
-            <div className="flex items-center mb-4">
-                <div className="bg-green-100 dark:bg-green-500/20 p-3 rounded-full mr-4">
-                    <MapPin className="w-6 h-6 text-urban-green" />
+        <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-xl p-8 border border-slate-200 dark:border-slate-700 max-w-lg w-full transition-all hover:shadow-2xl duration-300">
+            <div className="flex flex-col sm:flex-row gap-6 mb-8">
+                <div className="flex-1 text-left">
+                    <div className="flex items-center mb-4">
+                        <div className="bg-green-100 dark:bg-green-500/20 p-3 rounded-full mr-4">
+                            <MapPin className="w-6 h-6 text-urban-green" />
+                        </div>
+                        <div>
+                            <h3 className="text-xl font-bold text-slate-800 dark:text-white">Visit Our Hub</h3>
+                            <p className="text-sm font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wide">KANDY, SRI LANKA</p>
+                        </div>
+                    </div>
+                    <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+                        Check how close you are to our main sustainable gardening center!
+                    </p>
                 </div>
-                <div>
-                    <h3 className="text-lg font-bold text-slate-800 dark:text-white">Visit Our Hub</h3>
-                    <p className="text-xs text-slate-500 dark:text-slate-400">Greenway, Slivina, IL</p>
+
+                {/* Map Preview Thumbnail */}
+                <div className="sm:w-32 h-32 bg-slate-100 dark:bg-slate-700 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-600 flex-shrink-0 relative group self-center sm:self-start">
+                    <img
+                        src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&q=80&w=300"
+                        alt="Map Preview"
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-urban-green/20 group-hover:bg-transparent transition-colors duration-500" />
+                    <div className="absolute inset-0 flex items-center justify-center">
+                        <Navigation className="w-6 h-6 text-white drop-shadow-lg animate-bounce" />
+                    </div>
                 </div>
             </div>
 
-            <p className="text-slate-600 dark:text-slate-300 text-sm mb-6">
-                Check how close you are to our main sustainable gardening center!
-            </p>
-
-            {distance !== null && (
-                <div className="bg-green-50 dark:bg-green-500/20 rounded-lg p-4 mb-4 text-center border border-green-200 dark:border-green-500/30">
-                    <span className="text-3xl font-bold text-urban-green">{distance}</span>
-                    <span className="text-sm text-green-700 dark:text-green-400 ml-1">km away</span>
-                </div>
-            )}
-
-            {error && (
-                <div className="bg-red-50 dark:bg-red-500/20 rounded-lg p-3 mb-4 flex items-start text-sm text-red-700 dark:text-red-400 border border-red-200 dark:border-red-500/30">
-                    <AlertCircle className="w-4 h-4 mr-2 mt-0.5 flex-shrink-0" />
-                    {error}
-                </div>
-            )}
-
-            <button
-                onClick={handleCheckLocation}
-                disabled={loading}
-                className="w-full py-3 bg-urban-green hover:bg-green-600 text-white rounded-lg font-medium transition-colors flex items-center justify-center disabled:opacity-70 disabled:cursor-not-allowed"
-            >
-                {loading ? (
-                    <span className="animate-pulse">Locating...</span>
-                ) : (
-                    <>
-                        <Navigation className="w-4 h-4 mr-2" />
-                        Check Distance
-                    </>
+            <div className="space-y-4">
+                {distance !== null && (
+                    <div className="bg-green-50 dark:bg-green-500/10 rounded-xl p-6 text-center border border-green-200 dark:border-green-500/30 animate-in zoom-in duration-300">
+                        <p className="text-slate-500 dark:text-slate-400 text-xs uppercase tracking-widest mb-1 font-bold">Estimated Distance</p>
+                        <div className="flex items-baseline justify-center">
+                            <span className="text-4xl font-extrabold text-urban-green">{distance}</span>
+                            <span className="text-lg font-bold text-green-700 dark:text-green-400 ml-2">km away</span>
+                        </div>
+                    </div>
                 )}
-            </button>
+
+                {error && (
+                    <div className="bg-red-50 dark:bg-red-500/10 rounded-xl p-4 flex items-start text-sm text-red-700 dark:text-red-400 border border-red-200 dark:border-red-500/30 animate-in slide-in-from-top duration-300">
+                        <AlertCircle className="w-5 h-5 mr-3 mt-0.5 flex-shrink-0" />
+                        <p className="font-medium">{error}</p>
+                    </div>
+                )}
+
+                <button
+                    onClick={handleCheckLocation}
+                    disabled={loading}
+                    className="w-full py-4 bg-urban-green hover:bg-green-600 active:bg-green-700 text-white rounded-xl font-bold text-lg transition-all shadow-md hover:shadow-lg flex items-center justify-center disabled:opacity-70 disabled:cursor-not-allowed transform hover:-translate-y-0.5 active:translate-y-0"
+                >
+                    {loading ? (
+                        <div className="flex items-center">
+                            <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin mr-3" />
+                            Locating...
+                        </div>
+                    ) : (
+                        <>
+                            <Navigation className="w-5 h-5 mr-2" />
+                            Check Distance
+                        </>
+                    )}
+                </button>
+            </div>
         </div>
     );
 };
 
 export default LocationHub;
+
