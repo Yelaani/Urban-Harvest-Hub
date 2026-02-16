@@ -11,6 +11,7 @@ import Checkout from './pages/Checkout';
 import Payment from './pages/Payment';
 import Login from './pages/Login';
 import Admin from './pages/Admin';
+import UserManagement from './pages/UserManagement';
 import MyBookings from './pages/MyBookings';
 import NotFound from './pages/NotFound';
 import OfflineToast from './components/ui/OfflineToast';
@@ -34,6 +35,7 @@ function App() {
                 <Route path="/payment" element={<Payment />} />
                 <Route path="/my-bookings" element={<MyBookings />} />
                 <Route path="/admin" element={<Admin />} />
+                <Route path="/admin/users" element={<UserManagement />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </Layout>

@@ -23,7 +23,12 @@ export default function Login() {
         if (result.success) {
             NotificationService.triggerHaptic([100, 50, 100]); // Success pattern
             NotificationService.showNotification('Welcome back!', `Successfully logged in as ${username}`);
-            navigate('/');
+
+            if (result.user?.role === 'admin') {
+                navigate('/admin');
+            } else {
+                navigate('/');
+            }
         } else {
             NotificationService.triggerHaptic([300]); // Error pattern
             setError(result.message);

@@ -18,6 +18,12 @@ export const createController = (Model) => ({
     },
     create: async (req, res) => {
         try {
+            // Generate ID if not provided (primary key is string and not auto-increment)
+            if (!req.body.id) {
+                const prefix = Model.name.toLowerCase().substring(0, 4); // prod, work, even
+                const shortPrefix = prefix === 'prod' ? 'prod' : (prefix === 'work' ? 'wk' : (prefix === 'even' ? 'evt' : prefix));
+                req.body.id = `${shortPrefix}-${Date.now()}`;
+            }
             const item = await Model.create(req.body);
             res.status(201).json(item);
         } catch (error) {

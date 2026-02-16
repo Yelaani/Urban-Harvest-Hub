@@ -17,12 +17,44 @@ const getItemById = async (itemType, itemId) => {
     }
 };
 
+// Helper to enrich bookings with item details
+const enrichBookings = async (bookings) => {
+    return await Promise.all(
+        bookings.map(async (booking) => {
+            const item = await getItemById(booking.itemType, booking.itemId);
+
+            return {
+                id: booking.id,
+                itemId: booking.itemId,
+                itemType: booking.itemType,
+                quantity: booking.quantity,
+                totalPrice: booking.totalPrice,
+                status: booking.status,
+                bookingDate: booking.bookingDate,
+                userEmail: booking.userEmail,
+                userName: booking.userName,
+                item: item ? {
+                    id: item.id,
+                    title: item.title,
+                    description: item.description,
+                    price: item.price,
+                    image: item.image,
+                    date: item.date || null,
+                    location: item.location || null,
+                    availability: item.availability || null
+                } : null
+            };
+        })
+    );
+};
+
 export const getAllBookings = async (req, res) => {
     try {
         const bookings = await Booking.findAll({
             order: [['bookingDate', 'DESC']]
         });
-        res.json(bookings);
+        const enriched = await enrichBookings(bookings);
+        res.json(enriched);
     } catch (error) {
         res.status(500).json({ message: error.message });
     }
@@ -46,36 +78,8 @@ export const getUserBookings = async (req, res) => {
             order: [['bookingDate', 'DESC']]
         });
 
-        // Enrich bookings with item details
-        const bookingsWithDetails = await Promise.all(
-            bookings.map(async (booking) => {
-                const item = await getItemById(booking.itemType, booking.itemId);
-                
-                return {
-                    id: booking.id,
-                    itemId: booking.itemId,
-                    itemType: booking.itemType,
-                    quantity: booking.quantity,
-                    totalPrice: booking.totalPrice,
-                    status: booking.status,
-                    bookingDate: booking.bookingDate,
-                    userEmail: booking.userEmail,
-                    userName: booking.userName,
-                    item: item ? {
-                        id: item.id,
-                        title: item.title,
-                        description: item.description,
-                        price: item.price,
-                        image: item.image,
-                        date: item.date || null,
-                        location: item.location || null,
-                        availability: item.availability || null
-                    } : null
-                };
-            })
-        );
-
-        res.json(bookingsWithDetails);
+        const enriched = await enrichBookings(bookings);
+        res.json(enriched);
     } catch (error) {
         res.status(500).json({ message: error.message });
     }
@@ -84,16 +88,16 @@ export const getUserBookings = async (req, res) => {
 export const createBooking = async (req, res) => {
     try {
         const { itemId, itemType, userEmail, userName, quantity = 1 } = req.body;
-        
+
         // Validate item exists
         const item = await getItemById(itemType, itemId);
         if (!item) {
             return res.status(404).json({ message: `${itemType} not found` });
         }
-        
+
         // Calculate total price
         const totalPrice = item.price * quantity;
-        
+
         // Create booking
         const booking = await Booking.create({
             userId: req.userId || null, // Optional: can be null for guest bookings
@@ -105,7 +109,7 @@ export const createBooking = async (req, res) => {
             totalPrice,
             status: 'pending'
         });
-        
+
         res.status(201).json(booking);
     } catch (error) {
         res.status(400).json({ message: error.message });
@@ -116,7 +120,7 @@ export const updateBooking = async (req, res) => {
     try {
         const booking = await Booking.findByPk(req.params.id);
         if (!booking) return res.status(404).json({ message: 'Booking not found' });
-        
+
         // Only allow updating status for now
         const { status } = req.body;
         if (status && ['pending', 'confirmed', 'cancelled'].includes(status)) {

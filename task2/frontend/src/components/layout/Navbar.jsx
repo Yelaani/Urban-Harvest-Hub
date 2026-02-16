@@ -1,5 +1,5 @@
 import { Link, NavLink, useNavigate } from 'react-router-dom';
-import { ShoppingBag, Menu, X, Leaf, LogOut, User as UserIcon, Settings, Package } from 'lucide-react';
+import { ShoppingBag, Menu, X, Leaf, LogOut, User as UserIcon, Settings, Package, Users, Bell, LayoutDashboard } from 'lucide-react';
 import { useCart } from '../../contexts/CartContext';
 import { useAuth } from '../../context/AuthContext';
 import DarkModeToggle from '../ui/DarkModeToggle';
@@ -15,9 +15,10 @@ const Navbar = () => {
     const navigate = useNavigate();
 
     const handleLogout = () => {
+        const wasAdmin = isAdmin;
         logout();
         setIsMenuOpen(false);
-        navigate('/');
+        navigate(wasAdmin ? '/login' : '/');
     };
 
     const navLinks = [
@@ -36,7 +37,7 @@ const Navbar = () => {
                 <div className="flex justify-between h-16">
                     {/* Logo */}
                     <div className="flex items-center">
-                        <Link to="/" className="flex items-center space-x-2">
+                        <Link to={isAdmin ? "/admin" : "/"} className="flex items-center space-x-2">
                             <Leaf className="h-8 w-8 text-urban-green" />
                             <span className="text-xl font-bold text-slate-800 dark:text-white tracking-tight">Urban Harvest Hub</span>
                         </Link>
@@ -63,6 +64,17 @@ const Navbar = () => {
                         {/* Language Switcher */}
                         <LanguageSwitcher />
 
+                        {isAdmin && (
+                            <Link
+                                to="/admin/users"
+                                className="p-2 text-slate-600 dark:text-slate-300 hover:text-urban-green transition-colors"
+                                aria-label="User Management"
+                                title="User Management"
+                            >
+                                <Users className="w-5 h-5" />
+                            </Link>
+                        )}
+
                         <button
                             onClick={() => import('../../services/NotificationService').then(m => m.NotificationService.requestPermission())}
                             className="p-2 text-slate-600 dark:text-slate-300 hover:text-urban-green transition-colors"
@@ -70,7 +82,7 @@ const Navbar = () => {
                             title="Enable Notifications"
                         >
                             <span className="sr-only">Enable Notifications</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-bell"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9" /><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0" /></svg>
+                            <Bell className="w-5 h-5" />
                         </button>
 
                         {/* Auth Controls */}
@@ -81,7 +93,7 @@ const Navbar = () => {
                                         to="/admin"
                                         className="text-sm font-medium text-slate-600 hover:text-urban-green transition-colors flex items-center"
                                     >
-                                        <Settings className="w-4 h-4 mr-1" />
+                                        <LayoutDashboard className="w-4 h-4 mr-1" />
                                         Admin
                                     </Link>
                                 )}
@@ -183,6 +195,16 @@ const Navbar = () => {
                                         <UserIcon className="w-4 h-4 mr-2" />
                                         {user?.username || 'User'}
                                     </div>
+                                    {isAdmin && (
+                                        <Link
+                                            to="/admin/users"
+                                            onClick={() => setIsMenuOpen(false)}
+                                            className="block px-3 py-2 rounded-md text-base font-medium text-slate-600 dark:text-slate-300 hover:text-urban-green hover:bg-green-50 dark:hover:bg-green-900/20 flex items-center"
+                                        >
+                                            <Users className="w-4 h-4 mr-2" />
+                                            User Management
+                                        </Link>
+                                    )}
                                     {!isAdmin && (
                                         <Link
                                             to="/my-bookings"

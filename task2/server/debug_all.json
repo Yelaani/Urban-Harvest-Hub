@@ -1,0 +1,102 @@
+{
+  "products": [
+    {
+      "id": "prod-001",
+      "title": "Organic Basil Grow Kit"
+    },
+    {
+      "id": "prod-002",
+      "title": "Heirloom Tomato Seeds"
+    },
+    {
+      "id": "prod-003",
+      "title": "Bamboo Garden Tool Set"
+    },
+    {
+      "id": "prod-004",
+      "title": "Vertical Wall Planter"
+    },
+    {
+      "id": "prod-005",
+      "title": "Organic Vegetable Seeds"
+    },
+    {
+      "id": "prod-006",
+      "title": "Ceramic Self-Watering Pot"
+    },
+    {
+      "id": "prod-007",
+      "title": "Solitary Bee Hotel"
+    },
+    {
+      "id": "prod-008",
+      "title": "Oyster Mushroom Grow Kit"
+    },
+    {
+      "id": "prod-009",
+      "title": "Rainwater Collection Barrel"
+    },
+    {
+      "id": "prod-010",
+      "title": "Reusable Produce Bags"
+    },
+    {
+      "id": "prod-011",
+      "title": "Heirloom Carrot Seeds"
+    },
+    {
+      "id": "prod-012",
+      "title": "Gardening Gloves"
+    }
+  ],
+  "events": [
+    {
+      "id": "evt-001",
+      "title": "Urban Gardening Workshop"
+    },
+    {
+      "id": "evt-002",
+      "title": "Eco-Friendly Market Day"
+    },
+    {
+      "id": "evt-003",
+      "title": "Spring Seed Swap"
+    },
+    {
+      "id": "evt-004",
+      "title": "Community Garden Cleanup"
+    },
+    {
+      "id": "evt-005",
+      "title": "Sustainability Fair 2026"
+    },
+    {
+      "id": "evt-006",
+      "title": "Farm-to-Table Dinner"
+    },
+    {
+      "id": "evt-007",
+      "title": "Urban Harvest Festival"
+    },
+    {
+      "id": "evt-008",
+      "title": "Green City Architecture Tour"
+    },
+    {
+      "id": "evt-009",
+      "title": "Kids Nature Scavenger Hunt"
+    },
+    {
+      "id": "evt-010",
+      "title": "Local Farmers Meet & Greet"
+    },
+    {
+      "id": "evt-011",
+      "title": "Rooftop Garden Open Day"
+    },
+    {
+      "id": "evt-012",
+      "title": "Winter Planning Symposium"
+    }
+  ]
+}

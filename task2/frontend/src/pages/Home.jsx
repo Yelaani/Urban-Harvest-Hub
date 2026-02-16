@@ -1,4 +1,6 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
+import { useAuth } from '../context/AuthContext';
 import { ArrowRight, Leaf } from 'lucide-react';
 import LocationHub from '../components/LocationHub';
 
@@ -6,6 +8,15 @@ import { useTranslation } from 'react-i18next';
 
 const Home = () => {
     const { t } = useTranslation();
+    const { user } = useAuth();
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        if (user?.role === 'admin') {
+            navigate('/admin');
+        }
+    }, [user, navigate]);
+
     // Debug: Check if dark class exists
     if (typeof window !== 'undefined') {
         console.log('Home component - HTML has dark class?', document.documentElement.classList.contains('dark'));

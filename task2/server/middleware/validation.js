@@ -63,7 +63,7 @@ const workshopSchema = Joi.object({
     coordinates: Joi.object({
         lat: Joi.number(),
         lng: Joi.number()
-    }).optional()
+    }).allow(null).optional()
 });
 
 // Event validation schema
@@ -94,23 +94,23 @@ const eventSchema = Joi.object({
     coordinates: Joi.object({
         lat: Joi.number(),
         lng: Joi.number()
-    }).optional()
+    }).allow(null).optional()
 });
 
 // Validation middleware helper
 const validate = (schema) => {
     return (req, res, next) => {
-        const { error, value } = schema.validate(req.body, { 
+        const { error, value } = schema.validate(req.body, {
             abortEarly: false,
             allowUnknown: true, // Allow unknown fields (like date, location for products)
             stripUnknown: true   // Strip unknown fields from the validated result
         });
-        
+
         if (error) {
             const messages = error.details.map(detail => detail.message).join(', ');
             return res.status(400).json({ message: messages });
         }
-        
+
         // Replace req.body with validated and sanitized value
         req.body = value;
         next();
