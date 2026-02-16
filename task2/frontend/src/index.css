@@ -14,7 +14,54 @@ body {
   @apply bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-200 font-outfit antialiased selection:bg-urban-green selection:text-white;
 }
 
-/* Accessibility: Visible focus states for keyboard navigation */
-:focus-visible {
-  @apply outline-none ring-2 ring-urban-green ring-offset-2;
+@layer utilities {
+  .animate-in {
+    animation-duration: 700ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .fade-in {
+    animation-name: fadeIn;
+  }
+
+  .slide-in-from-left {
+    animation-name: slideInLeft;
+  }
+
+  .slide-in-from-right {
+    animation-name: slideInRight;
+  }
+
+  .zoom-in {
+    animation-name: zoomIn;
+  }
+
+  .duration-300 {
+    animation-duration: 300ms;
+  }
+
+  .duration-700 {
+    animation-duration: 700ms;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInLeft {
+  from { transform: translateX(-20px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(20px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
 }

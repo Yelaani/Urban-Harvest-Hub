@@ -1,7 +1,7 @@
 import { Link, useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useAuth } from '../context/AuthContext';
-import { ArrowRight, Leaf } from 'lucide-react';
+import { ArrowRight, Leaf, MapPin } from 'lucide-react';
 import LocationHub from '../components/LocationHub';
 
 import { useTranslation } from 'react-i18next';
@@ -68,11 +68,37 @@ const Home = () => {
             </section>
 
             {/* Location Hub */}
-            <section className="bg-slate-50 dark:bg-slate-900 py-16 px-4">
-                <div className="max-w-7xl mx-auto text-center">
-                    <h2 className="text-3xl font-bold text-slate-800 dark:text-white mb-6">{t('home.visit_hub')}</h2>
-                    <p className="text-slate-600 dark:text-slate-300 mb-8">{t('home.get_directions')}</p>
-                    <LocationHub />
+            <section className="bg-[#f0f9f4] dark:bg-slate-900/40 py-20 px-4 border-y border-green-100 dark:border-slate-800 relative overflow-hidden">
+                <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/4 w-96 h-96 bg-green-200/20 rounded-full blur-3xl -z-10" />
+                <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
+                    <div className="text-left animate-in fade-in slide-in-from-left duration-700">
+                        <div className="inline-flex items-center px-3 py-1 bg-green-100 dark:bg-green-900/30 text-urban-green dark:text-green-400 rounded-full text-sm font-semibold mb-4">
+                            <MapPin className="w-4 h-4 mr-2" />
+                            {t('location_hub.city')}
+                        </div>
+                        <h2 className="text-4xl md:text-5xl font-bold text-slate-800 dark:text-white mb-6 leading-tight font-outfit">
+                            {t('home.visit_hub')}
+                        </h2>
+                        <p className="text-lg text-slate-600 dark:text-slate-300 mb-8 max-w-xl">
+                            {t('home.get_directions')}
+                        </p>
+                        <div className="flex items-center gap-4 text-sm text-slate-500 dark:text-slate-400">
+                            <div className="flex -space-x-2">
+                                {[1, 2, 3].map((i) => (
+                                    <img
+                                        key={i}
+                                        src={`https://i.pravatar.cc/100?img=${i + 10}`}
+                                        className="w-8 h-8 rounded-full border-2 border-white dark:border-slate-800"
+                                        alt="User"
+                                    />
+                                ))}
+                            </div>
+                            <span>500+ visitors this month</span>
+                        </div>
+                    </div>
+                    <div className="flex justify-center lg:justify-end animate-in fade-in slide-in-from-right duration-700">
+                        <LocationHub />
+                    </div>
                 </div>
             </section>
         </div>
