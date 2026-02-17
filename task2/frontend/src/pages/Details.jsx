@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import api from '../services/api';
 import { useCart } from '../contexts/CartContext';
 import { getWeather } from '../services/weatherService';
-import { MapPin, Calendar, Cloud, Wind, Thermometer, ArrowLeft, Check } from 'lucide-react';
+import { MapPin, Calendar, Cloud, Wind, Thermometer, ArrowLeft, Check, Plus, Minus, ShoppingCart } from 'lucide-react';
 import { SkeletonDetails } from '../components/ui/SkeletonLoader';
 
 const Details = () => {
@@ -15,6 +15,8 @@ const Details = () => {
     const [loading, setLoading] = useState(true);
     const [weather, setWeather] = useState(null);
     const [loadingWeather, setLoadingWeather] = useState(false);
+    const [quantity, setQuantity] = useState(1);
+    const [addedToCart, setAddedToCart] = useState(false);
 
     useEffect(() => {
         const fetchItem = async () => {
@@ -67,8 +69,14 @@ const Details = () => {
     }
 
     const handleBook = () => {
-        addToCart(item); // Add to cart
-        navigate('/booking'); // Proceed to booking form
+        if (item.category === 'products') {
+            addToCart(item, quantity);
+            setAddedToCart(true);
+            setTimeout(() => setAddedToCart(false), 3000);
+        } else {
+            addToCart(item, 1); // Add to cart
+            navigate('/booking'); // Proceed to booking form
+        }
     };
 
     return (
@@ -125,13 +133,63 @@ const Details = () => {
                         )}
                     </div>
 
+                    {/* Quantity Selector for Products */}
+                    {item.category === 'products' && (
+                        <div className="flex items-center space-x-6 mb-8 group animate-in slide-in-from-left">
+                            <span className="text-slate-700 dark:text-slate-300 font-bold uppercase text-xs tracking-wider">Quantity</span>
+                            <div className="flex items-center bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl shadow-sm overflow-hidden">
+                                <button
+                                    onClick={() => setQuantity(Math.max(1, quantity - 1))}
+                                    className="p-3 hover:bg-slate-50 dark:hover:bg-slate-700 text-slate-500 dark:text-slate-400 transition-colors"
+                                    aria-label="Decrease quantity"
+                                >
+                                    <Minus className="w-4 h-4" />
+                                </button>
+                                <span className="w-12 text-center font-bold text-slate-800 dark:text-white border-x border-slate-100 dark:border-slate-700">
+                                    {quantity}
+                                </span>
+                                <button
+                                    onClick={() => setQuantity(quantity + 1)}
+                                    className="p-3 hover:bg-slate-50 dark:hover:bg-slate-700 text-urban-green dark:text-green-400 transition-colors"
+                                    aria-label="Increase quantity"
+                                >
+                                    <Plus className="w-4 h-4" />
+                                </button>
+                            </div>
+                        </div>
+                    )}
+
                     {/* Action Button */}
-                    <button
-                        onClick={handleBook}
-                        className="w-full md:w-auto px-8 py-3 bg-urban-green hover:bg-green-700 text-white font-bold rounded-lg shadow-md hover:shadow-xl transition-all mb-10 transform active:scale-95"
-                    >
-                        {item.category === 'products' ? 'Add to Cart' : 'Book Now'}
-                    </button>
+                    <div className="flex flex-col sm:flex-row gap-4 items-center">
+                        <button
+                            onClick={handleBook}
+                            disabled={addedToCart}
+                            className={`w-full md:w-auto px-8 py-4 ${addedToCart
+                                ? 'bg-slate-400 cursor-not-allowed'
+                                : 'bg-urban-green hover:bg-green-700 shadow-urban-green/20'
+                                } text-white font-bold rounded-xl shadow-lg hover:shadow-xl transition-all mb-10 transform active:scale-95 flex items-center justify-center`}
+                        >
+                            {addedToCart ? (
+                                <>
+                                    <Check className="w-5 h-5 mr-2" />
+                                    Added to Cart
+                                </>
+                            ) : (
+                                <>
+                                    <ShoppingCart className="w-5 h-5 mr-2" />
+                                    {item.category === 'products' ? 'Add to Cart' : 'Book Now'}
+                                </>
+                            )}
+                        </button>
+
+                        {addedToCart && (
+                            <div className="text-urban-green dark:text-green-400 font-semibold mb-10 flex items-center animate-in fade-in slide-in-from-right">
+                                <span className="bg-green-100 dark:bg-green-900/30 px-3 py-1 rounded-full text-sm">
+                                    Items added successfully!
+                                </span>
+                            </div>
+                        )}
+                    </div>
 
                     {/* Weather Widget (API Integration) */}
                     {item.coordinates && (

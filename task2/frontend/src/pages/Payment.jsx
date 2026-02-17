@@ -1,24 +1,51 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useCart } from '../contexts/CartContext';
-import { CheckCircle, CreditCard } from 'lucide-react';
+import { CheckCircle, CreditCard, AlertCircle } from 'lucide-react';
+import api from '../services/api';
 
 const Payment = () => {
     const navigate = useNavigate();
-    const { clearCart, cartTotal } = useCart();
+    const { cartItems, clearCart, cartTotal } = useCart();
     const [processing, setProcessing] = useState(false);
     const [success, setSuccess] = useState(false);
+    const [error, setError] = useState(null);
 
-    const handlePayment = (e) => {
+    const handlePayment = async (e) => {
         e.preventDefault();
         setProcessing(true);
+        setError(null);
 
-        // Simulate API call
-        setTimeout(() => {
-            setProcessing(false);
+        try {
+            // Retrieve booking user info from localStorage
+            const userName = localStorage.getItem('booking_user_name') || 'Valued Customer';
+            const userEmail = localStorage.getItem('booking_user_email');
+
+            if (!userEmail) {
+                throw new Error("User email not found. Please go back to the booking form.");
+            }
+
+            // Call the real backend API to process payment and send email
+            await api.post('/bookings/process-payment', {
+                items: cartItems,
+                userEmail,
+                userName,
+                total: cartTotal
+            });
+
             setSuccess(true);
             clearCart();
-        }, 2000);
+
+            // Clean up temporary info
+            localStorage.removeItem('booking_user_name');
+            localStorage.removeItem('booking_user_email');
+
+        } catch (err) {
+            console.error("Payment failed:", err);
+            setError(err.response?.data?.message || err.message || "An error occurred during payment.");
+        } finally {
+            setProcessing(false);
+        }
     };
 
     if (success) {
@@ -45,6 +72,13 @@ const Payment = () => {
                     <span className="text-slate-800 dark:text-white">Total Amount:</span>
                     <span className="text-urban-green dark:text-green-400">${cartTotal.toFixed(2)}</span>
                 </div>
+
+                {error && (
+                    <div className="mb-6 p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg flex items-center text-red-800 dark:text-red-400 animate-in fade-in">
+                        <AlertCircle className="w-5 h-5 mr-3 flex-shrink-0" />
+                        <p className="text-sm font-medium">{error}</p>
+                    </div>
+                )}
 
                 <form onSubmit={handlePayment}>
                     <div className="mb-4">

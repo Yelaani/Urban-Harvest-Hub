@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useAuth } from '../context/AuthContext';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { User, Lock, ArrowRight, Bell } from 'lucide-react';
 import { NotificationService } from '../services/NotificationService';
 
@@ -93,6 +93,12 @@ export default function Login() {
                             Sign in
                             <ArrowRight className="ml-2 h-4 w-4" />
                         </button>
+                    </div>
+
+                    <div className="text-center">
+                        <Link to="/register" className="text-sm font-medium text-emerald-600 hover:text-emerald-500 dark:text-emerald-400">
+                            Don't have an account? Create one
+                        </Link>
                     </div>
                 </form>
             </div>

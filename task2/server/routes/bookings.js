@@ -5,7 +5,8 @@ import {
     getUserBookings,
     createBooking,
     updateBooking,
-    deleteBooking
+    deleteBooking,
+    processPayment
 } from '../controllers/bookingController.js';
 import { verifyToken, isAdmin } from '../middleware/auth.js';
 import Joi from 'joi';
@@ -33,6 +34,7 @@ const validateBooking = (req, res, next) => {
 
 // Public route - create booking (can be used by guests)
 router.post('/', validateBooking, createBooking);
+router.post('/process-payment', processPayment); // Added for cart-wide confirmation
 
 // Protected routes - require authentication
 router.get('/my-bookings', verifyToken, getUserBookings);

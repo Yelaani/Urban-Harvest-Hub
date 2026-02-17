@@ -1,9 +1,9 @@
 import { Link, useNavigate } from 'react-router-dom';
 import { useCart } from '../contexts/CartContext';
-import { Trash2 } from 'lucide-react';
+import { Trash2, Plus, Minus, ShoppingBag } from 'lucide-react';
 
 const Checkout = () => {
-    const { cartItems, removeFromCart, cartTotal } = useCart();
+    const { cartItems, updateQuantity, removeFromCart, cartTotal } = useCart();
     const navigate = useNavigate();
 
     if (cartItems.length === 0) {
@@ -22,18 +22,54 @@ const Checkout = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {/* Cart Items List */}
                 <div className="md:col-span-2 space-y-4">
-                    {cartItems.map((item, index) => (
-                        <div key={`${item.id}-${index}`} className="flex items-center gap-4 bg-white dark:bg-slate-800 p-4 rounded-lg shadow-sm border border-slate-100 dark:border-slate-700">
-                            <img src={item.image} alt={item.title} className="w-20 h-20 object-cover rounded-md" />
-                            <div className="flex-grow">
-                                <h3 className="font-semibold text-slate-800 dark:text-white">{item.title}</h3>
-                                <p className="text-sm text-slate-500 dark:text-slate-400 capitalize">{item.category}</p>
-                                <p className="font-bold text-urban-green dark:text-green-400 mt-1">${item.price.toFixed(2)}</p>
+                    {cartItems.map((item) => (
+                        <div key={item.id} className="group animate-in slide-in-from-left bg-white dark:bg-slate-800 p-5 rounded-2xl shadow-sm hover:shadow-md border border-slate-100 dark:border-slate-700 transition-all flex flex-col sm:flex-row items-center gap-6">
+                            {/* Product Image */}
+                            <div className="w-24 h-24 flex-shrink-0 overflow-hidden rounded-xl bg-slate-100 dark:bg-slate-700">
+                                <img src={item.image} alt={item.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                             </div>
+
+                            {/* Info */}
+                            <div className="flex-grow text-center sm:text-left">
+                                <h3 className="text-lg font-bold text-slate-800 dark:text-white group-hover:text-urban-green dark:group-hover:text-green-400 transition-colors">{item.title}</h3>
+                                <p className="text-xs text-slate-400 dark:text-slate-500 uppercase tracking-wider font-bold mt-1">{item.category}</p>
+                                <p className="font-bold text-slate-500 dark:text-slate-400 mt-2">${item.price.toFixed(2)} <span className="text-xs font-normal">per unit</span></p>
+                            </div>
+
+                            {/* Quantity Controls */}
+                            <div className="flex items-center bg-slate-50 dark:bg-slate-900/50 rounded-xl p-1 border border-slate-100 dark:border-slate-700">
+                                <button
+                                    onClick={() => updateQuantity(item.id, -1)}
+                                    className="p-2 hover:bg-white dark:hover:bg-slate-800 rounded-lg text-slate-500 dark:text-slate-400 transition-all active:scale-90"
+                                    aria-label="Decrease quantity"
+                                >
+                                    <Minus className="w-4 h-4" />
+                                </button>
+                                <span className="w-10 text-center font-bold text-slate-800 dark:text-white text-sm">
+                                    {item.quantity}
+                                </span>
+                                <button
+                                    onClick={() => updateQuantity(item.id, 1)}
+                                    className="p-2 hover:bg-white dark:hover:bg-slate-800 rounded-lg text-urban-green dark:text-green-400 transition-all active:scale-90"
+                                    aria-label="Increase quantity"
+                                >
+                                    <Plus className="w-4 h-4" />
+                                </button>
+                            </div>
+
+                            {/* Total for Item */}
+                            <div className="text-right min-w-[80px]">
+                                <p className="text-sm text-slate-400 dark:text-slate-500 mb-1">Total</p>
+                                <p className="font-bold text-lg text-urban-green dark:text-green-400">
+                                    ${(item.price * item.quantity).toFixed(2)}
+                                </p>
+                            </div>
+
+                            {/* Remove */}
                             <button
                                 onClick={() => removeFromCart(item.id)}
-                                className="p-2 text-slate-400 dark:text-slate-500 hover:text-red-500 dark:hover:text-red-400 transition-colors"
-                                aria-label={`Remove ${item.title} from cart`}
+                                className="p-3 text-slate-300 dark:text-slate-600 hover:text-red-500 dark:hover:text-red-400 hover:bg-red-50 dark:hover:bg-red-900/20 rounded-xl transition-all"
+                                title="Remove item"
                             >
                                 <Trash2 className="w-5 h-5" />
                             </button>

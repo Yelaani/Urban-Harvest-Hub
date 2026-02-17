@@ -27,8 +27,10 @@ This document provides a comprehensive overview of the technical implementation 
 - **Internal Data**: Static seed data is loaded from `src/data/inventory.json`.
 - **External API**: Integrated the **Open-Meteo API** in `src/services/weatherService.js` to fetch real-time weather data for outdoor gardening events.
 - **Master-Detail View**:
-  - **Master**: `Category.jsx` lists items with filtering.
-  - **Detail**: `Details.jsx` fetches and displays full information for a selected ID.
+```markdown
+  - **Master**: `src/pages/Category.jsx` lists items with filtering.
+  - **Detail**: `src/pages/Details.jsx` fetches and displays full information for a selected ID.
+``` 
 - **State Management**: Reactive state handled via `useState` and `useReducer` inside Contexts.
 
 ### 4. Tailwind Styling (5 Marks)

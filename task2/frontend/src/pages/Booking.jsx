@@ -49,7 +49,9 @@ const Booking = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         if (validate()) {
-            // Logic to save user details could go here
+            // Save user details for payment confirmation
+            localStorage.setItem('booking_user_name', formData.name);
+            localStorage.setItem('booking_user_email', formData.email);
             navigate('/checkout');
         }
     };

@@ -1,7 +1,7 @@
 import { cleanupOutdatedCaches, precacheAndRoute } from 'workbox-precaching';
 import { clientsClaim } from 'workbox-core';
 import { registerRoute } from 'workbox-routing';
-import { StaleWhileRevalidate, CacheFirst } from 'workbox-strategies';
+import { StaleWhileRevalidate, CacheFirst, NetworkFirst } from 'workbox-strategies';
 import { ExpirationPlugin } from 'workbox-expiration';
 
 // Clean up old caches
@@ -15,6 +15,19 @@ clientsClaim();
 precacheAndRoute(self.__WB_MANIFEST);
 
 // --- Runtime Caching ---
+
+// Navigation Route (Handles refreshes while offline)
+registerRoute(
+    ({ request }) => request.mode === 'navigate',
+    new NetworkFirst({
+        cacheName: 'navigation-cache',
+        plugins: [
+            new ExpirationPlugin({
+                maxEntries: 10,
+            }),
+        ],
+    })
+);
 
 // API Caching
 registerRoute(

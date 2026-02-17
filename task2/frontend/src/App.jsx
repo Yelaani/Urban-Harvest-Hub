@@ -14,6 +14,7 @@ import Admin from './pages/Admin';
 import UserManagement from './pages/UserManagement';
 import MyBookings from './pages/MyBookings';
 import NotFound from './pages/NotFound';
+import Register from './pages/Register';
 import OfflineToast from './components/ui/OfflineToast';
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/login" element={<Login />} />
+                <Route path="/register" element={<Register />} />
                 <Route path="/explore" element={<Category />} />
                 <Route path="/explore/:category" element={<Category />} />
                 <Route path="/item/:id" element={<Details />} />

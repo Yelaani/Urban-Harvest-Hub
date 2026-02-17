@@ -2,6 +2,7 @@ import { Booking } from '../models/Booking.js';
 import { Product } from '../models/Product.js';
 import { Workshop } from '../models/Workshop.js';
 import { Event } from '../models/Event.js';
+import { sendConfirmationEmail } from '../services/emailService.js';
 
 // Helper to get item by type and id
 const getItemById = async (itemType, itemId) => {
@@ -142,5 +143,40 @@ export const deleteBooking = async (req, res) => {
         res.json({ message: 'Booking deleted successfully' });
     } catch (error) {
         res.status(500).json({ message: error.message });
+    }
+};
+
+export const processPayment = async (req, res) => {
+    try {
+        const { items, userEmail, userName, total } = req.body;
+
+        if (!items || !items.length) {
+            return res.status(400).json({ message: 'Cart is empty' });
+        }
+
+        // Create booking records for each item in the cart
+        const bookingPromises = items.map(item => {
+            return Booking.create({
+                userId: req.userId || null,
+                itemId: item.id,
+                itemType: item.category === 'products' ? 'product' :
+                    item.category === 'workshops' ? 'workshop' : 'event',
+                userEmail,
+                userName,
+                quantity: item.quantity || 1,
+                totalPrice: item.price * (item.quantity || 1),
+                status: 'confirmed'
+            });
+        });
+
+        await Promise.all(bookingPromises);
+
+        // Send confirmation email
+        await sendConfirmationEmail(userEmail, userName, items, total);
+
+        res.status(200).json({ message: 'Payment processed and confirmation email sent' });
+    } catch (error) {
+        console.error('Payment processing error:', error);
+        res.status(500).json({ message: 'Failed to process payment', error: error.message });
     }
 };
